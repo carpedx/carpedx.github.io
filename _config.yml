@@ -2,18 +2,18 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://mazhuang.org
+url: https://carpedx.com
 date_format: "ordinal"
-title: 码志
-subtitle: "公众号：闷骚的程序员"
-description: "马壮的个人博客，公众号：闷骚的程序员"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
+title: carpedx
+subtitle: "Coding My Life..."
+description: "ab's Tech Blog"
+keywords: carpedx
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
-since: 2015
+since: 2022
 # 源码仓库，请替换成自己的
-repository: mzlogin/mzlogin.github.io
+repository: carpedx/carpedx.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
@@ -39,11 +39,11 @@ components:
     # 页面右上角，以及「关于」页面的二维码
     # 修改图片请替换 assets/images/qrcode.jpg
     qrcode:
-        enabled: true
-        image_alt: 闷骚的程序员
+        enabled: false
+        image_alt: carpedx
     # 维基索引页使用哪种视图，支持 列表（list）/分类（cate）
     wiki:
-        view: cate
+        view: list
     # 图片灯箱效果功能
     fancybox:
         enabled: false
@@ -57,12 +57,12 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
-organization: 
-organization_url: 
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+author: carpedx
+organization: Backend Developer
+organization_url: https://carpedx.com
+github_username: carpedx
+location: Xian, China
+email: carpedx@yahoo.com
 
 # ---------------- #
 #    Navigation    #
@@ -77,31 +77,35 @@ navs:
     label: 分类
 
   -
-    href: /archives/
-    label: 归档
-    mobile-hidden: true
+    href: /notes/
+    label: 笔记
+    
+#  -
+#    href: /archives/
+#    label: 归档
+#    mobile-hidden: true
 
-  -
-    href: /open-source/
-    label: 开源
-    mobile-hidden: true
+#  -
+#    href: /open-source/
+#    label: 开源贡献
+#    mobile-hidden: true
 
-  -
-    href: /fragments/
-    label: 片段
+#  -
+#    href: /fragments/
+#    label: 片段
 
   -
     href: /wiki/
-    label: 维基
+    label: 百科
 
-  -
-    href: /links/
-    label: 链接
-    mobile-hidden: true
+#  -
+#    href: /links/
+#    label: 链接
+#    mobile-hidden: true
 
-  -
-    href: /about/
-    label: 关于
+#  -
+#    href: /about/
+#    label: 关于
 
 # ---------------- #
 #       RSS        #
@@ -141,37 +145,37 @@ collections:
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk, utterances, beaudar, giscus
-comments_provider: giscus
+comments_provider: disqus
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # disqus 配置参考：https://disqus.com
 disqus:
-    username: 
+    username: carpedx
 # gitment 配置参考：https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
-    repo: blog-comments
+    owner: carpedx
+    repo: blog
     oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+        client_id: 
+        client_secret: 
 # gitalk 配置参考：https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: mzlogin
-    repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+    owner: carpedx
+    repo: blog
+    clientID: 
+    clientSecret: 
 # utterances 配置参考：https://utteranc.es/
 utterances:
-    repo: mzlogin/blog-comments
+    repo: carpedx/blog
 # beaudar 配置参考：https://beaudar.lipk.org/
 beaudar:
-    repo: mzlogin/blog-comments
+    repo: carpedx/blog
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
-    repo: mzlogin/blog-comments
-    repo-id: MDEwOlJlcG9zaXRvcnk5MzEyNzkxNw==
-    category: Announcements
-    category-id: DIC_kwDOBY0E7c4CRtg9
+    repo: carpedx/blog
+    repo-id: 
+    category: 
+    category-id: 
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
@@ -188,7 +192,7 @@ simple_jekyll_search:
 #      Google      #
 # ---------------- #
 google:
-    analytics_id: # G-20FLEG5Q2W
+    analytics_id: UA-x
     adsense:
         enabled: false
         footer: false
