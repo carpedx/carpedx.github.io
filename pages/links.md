@@ -8,21 +8,11 @@ menu: 链接
 permalink: /links/
 ---
 
-> God made relatives. Thank God we can choose our friends.
+> Scientific Internet Access
 
 <ul>
 {% for link in site.data.links %}
-  {% if link.src == 'life' %}
-  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-> 友情链接
-
-<ul>
-{% for link in site.data.links %}
-  {% if link.src == 'www' %}
+  {% if link.src == 'vpn' %}
   <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
   {% endif %}
 {% endfor %}
