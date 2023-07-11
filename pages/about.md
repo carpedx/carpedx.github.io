@@ -1,18 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: Coding My Life...
+keywords: carpedx
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+敲电子木鱼，攒赛博功德
 
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+见机甲佛祖，写量子编程
 
 ## 联系
 
