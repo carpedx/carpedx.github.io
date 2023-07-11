@@ -6,14 +6,14 @@ url: https://carpedx.com
 date_format: "ordinal"
 title: carpedx
 subtitle: "Coding My Life..."
-description: "ab's Tech Blog"
+description: "carpedx's Tech Blog"
 keywords: carpedx
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
 since: 2022
 # 源码仓库，请替换成自己的
-repository: carpedx/carpedx.github.io
+repository: mzlogin/mzlogin.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
@@ -43,7 +43,7 @@ components:
         image_alt: carpedx
     # 维基索引页使用哪种视图，支持 列表（list）/分类（cate）
     wiki:
-        view: list
+        view: cate
     # 图片灯箱效果功能
     fancybox:
         enabled: false
@@ -77,35 +77,31 @@ navs:
     label: 分类
 
   -
-    href: /notes/
-    label: 笔记
-    
-#  -
-#    href: /archives/
-#    label: 归档
-#    mobile-hidden: true
+    href: /archives/
+    label: 归档
+    mobile-hidden: true
 
-#  -
-#    href: /open-source/
-#    label: 开源贡献
-#    mobile-hidden: true
+  -
+    href: /open-source/
+    label: 开源
+    mobile-hidden: true
 
-#  -
-#    href: /fragments/
-#    label: 片段
+  -
+    href: /fragments/
+    label: 片段
 
   -
     href: /wiki/
-    label: 百科
+    label: 维基
 
-#  -
-#    href: /links/
-#    label: 链接
-#    mobile-hidden: true
+  -
+    href: /links/
+    label: 链接
+    mobile-hidden: true
 
-#  -
-#    href: /about/
-#    label: 关于
+  -
+    href: /about/
+    label: 关于
 
 # ---------------- #
 #       RSS        #
@@ -145,7 +141,7 @@ collections:
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk, utterances, beaudar, giscus
-comments_provider: disqus
+comments_provider: giscus
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # disqus 配置参考：https://disqus.com
@@ -153,29 +149,29 @@ disqus:
     username: carpedx
 # gitment 配置参考：https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: carpedx
-    repo: blog
+    owner: mzlogin
+    repo: blog-comments
     oauth:
-        client_id: 
-        client_secret: 
+        client_id: d2e1cbbd298958076462
+        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # gitalk 配置参考：https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: carpedx
-    repo: blog
-    clientID: 
-    clientSecret: 
+    owner: mzlogin
+    repo: blog-comments
+    clientID: d2e1cbbd298958076462
+    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # utterances 配置参考：https://utteranc.es/
 utterances:
-    repo: carpedx/blog
+    repo: mzlogin/blog-comments
 # beaudar 配置参考：https://beaudar.lipk.org/
 beaudar:
-    repo: carpedx/blog
+    repo: mzlogin/blog-comments
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
-    repo: carpedx/blog
-    repo-id: 
-    category: 
-    category-id: 
+    repo: mzlogin/blog-comments
+    repo-id: MDEwOlJlcG9zaXRvcnk5MzEyNzkxNw==
+    category: Announcements
+    category-id: DIC_kwDOBY0E7c4CRtg9
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
@@ -192,7 +188,7 @@ simple_jekyll_search:
 #      Google      #
 # ---------------- #
 google:
-    analytics_id: UA-x
+    analytics_id: # G-20FLEG5Q2W
     adsense:
         enabled: false
         footer: false
