@@ -13,7 +13,7 @@ encoding: "utf-8"
 # 页面左下角显示的年份
 since: 2023
 # 源码仓库，请替换成自己的
-repository: mzlogin/mzlogin.github.io
+repository: carpedx/carpedx.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
@@ -153,29 +153,29 @@ disqus:
     username: carpedx
 # gitment 配置参考：https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
+    owner: carpedx
     repo: blog-comments
     oauth:
         client_id: d2e1cbbd298958076462
         client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # gitalk 配置参考：https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: mzlogin
+    owner: carpedx
     repo: blog-comments
     clientID: d2e1cbbd298958076462
     clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # utterances 配置参考：https://utteranc.es/
 utterances:
-    repo: mzlogin/blog-comments
+    repo: carpedx/blog-comments
 # beaudar 配置参考：https://beaudar.lipk.org/
 beaudar:
-    repo: mzlogin/blog-comments
+    repo: carpedx/blog-comments
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
-    repo: mzlogin/blog-comments
-    repo-id: MDEwOlJlcG9zaXRvcnk5MzEyNzkxNw==
+    repo: carpedx/blog-comments
+    repo-id: R_kgDOJ7A8tg
     category: Announcements
-    category-id: DIC_kwDOBY0E7c4CRtg9
+    category-id: DIC_kwDOJ7A8ts4CX21W
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
