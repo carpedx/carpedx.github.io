@@ -1,11 +1,15 @@
-- name: ikuuu
+- name: ¹È¸è·­Òë²å¼þ
+  url: https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=zh-CN
+  src: google
+
+- name: ladder_one
   url: https://ikuuu.club/
   src: vpn
 
-- name: xjh
+- name: ladder_two
   url: https://web.xjh23.top/#/login/
   src: vpn
 
-- name: xiyou
+- name: ladder_three
   url: https://sunwk.fun/
   src: vpn
