@@ -1,7 +1,3 @@
-- name: ¹È¸è·­Òë²å¼þ
-  url: https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=zh-CN/
-  src: google
-
 - name: ladder_one
   url: https://ikuuu.club/
   src: vpn
