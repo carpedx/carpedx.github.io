@@ -1,15 +1,15 @@
-- name: google
+- name: translation
   url: https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=zh-CN/
   src: google
 
-- name: ladder_one
+- name: ladder
   url: https://ikuuu.club/
   src: vpn
 
-- name: ladder_two
+- name: ladder
   url: https://web.xjh23.top/#/login/
   src: vpn
 
-- name: ladder_three
+- name: ladder
   url: https://sunwk.fun/
   src: vpn
