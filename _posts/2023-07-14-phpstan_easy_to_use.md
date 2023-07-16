@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PHPStan简单使用
-categories: phpstan
+categories: php
 description: PHPStan简单使用
 keywords: php, phpstan
 ---
