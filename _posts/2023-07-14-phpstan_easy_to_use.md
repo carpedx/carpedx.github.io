@@ -28,7 +28,7 @@ composer require --dev phpstan/phpstan
 vendor\bin\phpstan analyse [options] [<paths>...]
 ```
 
-<paths>可以传递一个或多个 PHP 文件或目录的路径，并用空格分隔。例：
+可以传递一个或多个 PHP 文件或目录的路径，并用空格分隔。例：
 
 ```
 vendor\bin\phpstan analyse src tests
