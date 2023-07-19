@@ -6,11 +6,15 @@ description: PHPStan简单使用
 keywords: php, phpstan
 ---
 
+
+
 **PHPStan无需编写测试用例，即可发现代码中的错误**
 
 > 使用PHPStan要求PHP >= 7.2
 
 PHPStan：[官方GitHub](https://github.com/phpstan/phpstan)，[官方文档](https://phpstan.org/)
+
+------
 
 
 

@@ -6,11 +6,19 @@ description: Excel表格中将多行数据转换为加单引号的逗号分隔�
 keywords: excel
 ---
 
+
+
 **有时我们再写SQL IN查询的时候需要将数据单引号加逗号分隔**
+
+------
+
+
 
 #### 实例：一组Excel手机号数据，需要你在数据库中SQL IN查询
 
 <img src="/images/posts/excel/mysql_multi_row_data_conversion_step1.webp" width="50%" />
+
+
 
 **第一步：加单引号和逗号** 
 
@@ -19,9 +27,13 @@ keywords: excel
 ```
 <img src="/images/posts/excel/mysql_multi_row_data_conversion_step2.webp" width="50%" alt="步骤一" />
 
+
+
 **第二步： 复制粘贴值，只保留值**
 
 <img src="/images/posts/excel/mysql_multi_row_data_conversion_step3.webp" width="50%" alt="步骤二" />
+
+
 
 **第三步：使用函数 PHONETIC 拼接为一个单元格**
 
