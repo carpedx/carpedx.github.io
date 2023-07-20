@@ -1,3 +1,7 @@
+- name: php
+  url: https://www.php.net/manual/zh/index.php
+  src: php
+
 - name: composer
   url: https://docs.phpcomposer.com/
   src: php

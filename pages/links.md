@@ -8,7 +8,7 @@ menu: 链接
 permalink: /links/
 ---
 
-> PHP Framework Document
+> PHP Manual
 
 <ul>
 {% for link in site.data.links %}
