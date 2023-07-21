@@ -64,7 +64,7 @@ php-cs-fixer.phar fix /path/to/file
 
 #### PHPStorm 配置 PHP-CS-Fixer 代码检查提示
 
-接下来，在 PhpStorm 的 Preferences | Languages & Frameworks | PHP | Quality Tools 配置界面中，目前还没有配置任何 PHP CS Fixer 路径：
+接下来，在 PhpStorm 的 Preferences、Languages & Frameworks、PHP、Quality Tools 配置界面中，目前还没有配置任何 PHP CS Fixer 路径：
 
 <img src="/images/posts/php/php_cs_fixer_use_step1.jpg" width="50%" alt="步骤一" />
 
@@ -74,7 +74,7 @@ php-cs-fixer.phar fix /path/to/file
 
 下面会出现包含 OK 和 PHP CS Fixer 版本的提示文本，表示该路径有效，点击「Apply」按钮应用更改，点击「OK」关闭该窗口。
 
-接下来，在 PHP | Quality Tools 界面点击「PHP CS Fixer inspection」：
+接下来，在 PHP、Quality Tools 界面点击「PHP CS Fixer inspection」：
 
 <img src="/images/posts/php/php_cs_fixer_use_step3.jpg" width="50%" alt="步骤三" />
 
@@ -106,7 +106,7 @@ php-cs-fixer.phar fix /path/to/file
 
 **批量修正**
 
-当然，对于整个项目来说，如果一个个这样修复是不现实的，我们可以在 PhpStorm 中通过配置外部工具来实现批量修正指定目录的代码风格。在 Preferences | Tools | External Tools 界面点击「+」新建一个外部工具：
+当然，对于整个项目来说，如果一个个这样修复是不现实的，我们可以在 PhpStorm 中通过配置外部工具来实现批量修正指定目录的代码风格。在 Preferences、Tools、External Tools 界面点击「+」新建一个外部工具：
 
 <img src="/images/posts/php/php_cs_fixer_use_step7.png" width="50%" alt="步骤七" />
 
