@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel表格中将多行数据转换为加单引号的逗号分隔数据
-categories: excel
-description: Excel表格中将多行数据转换为加单引号的逗号分隔数据
-keywords: excel
+title: PHP-CS-Fixer简单使用
+categories: php
+description: PHP-CS-Fixer简单使用
+keywords: php
 ---
 
 
 
-**有时我们再写SQL IN查询的时候需要将数据单引号加逗号分隔**
+**php-cs-fixer 是个代码格式化工具，格式化的标准是 PSR-1、PSR-2 以及一些 symfony 的标准。**
 
 PHP-CS-Fixer：[官方GitHub](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)，[官方文档](https://cs.symfony.com/)
 
