@@ -66,21 +66,21 @@ php-cs-fixer.phar fix /path/to/file
 
 接下来，在 PhpStorm 的 Preferences、Languages & Frameworks、PHP、Quality Tools 配置界面中，目前还没有配置任何 PHP CS Fixer 路径：
 
-<img src="/images/posts/php/php_cs_fixer_use_step1.jpg" width="50%" alt="步骤一" />
+<img src="/images/posts/php/php_cs_fixer_use_step1.jpg" />
 
 点击配置下拉框右侧的「...」按钮，在弹出的窗口输入框输入上面运行 `which php-cs-fixer` 命令返回的路径，点击「Validate」按钮进行验证：
 
-<img src="/images/posts/php/php_cs_fixer_use_step2.jpg" width="50%" alt="步骤二" />
+<img src="/images/posts/php/php_cs_fixer_use_step2.jpg" />
 
 下面会出现包含 OK 和 PHP CS Fixer 版本的提示文本，表示该路径有效，点击「Apply」按钮应用更改，点击「OK」关闭该窗口。
 
 接下来，在 PHP、Quality Tools 界面点击「PHP CS Fixer inspection」：
 
-<img src="/images/posts/php/php_cs_fixer_use_step3.jpg" width="50%" alt="步骤三" />
+<img src="/images/posts/php/php_cs_fixer_use_step3.jpg" />
 
 在弹出界面勾选「PHP CS Fixer validation」：
 
-<img src="/images/posts/php/php_cs_fixer_use_step4.jpg" width="50%" alt="步骤四" />
+<img src="/images/posts/php/php_cs_fixer_use_step4.jpg" />
 
 可以看到这里默认使用的是 PSR-2 编码规则（你还可以通过下拉框选择使用其他编码风格）。点击「Apply」应用更改，点击「OK」关闭窗口。
 
@@ -94,11 +94,11 @@ php-cs-fixer.phar fix /path/to/file
 
 我们打开一个 PHP 文件，将类和方法后面的花括号调整为不换行：
 
-<img src="/images/posts/php/php_cs_fixer_use_step5.jpg" width="50%" alt="步骤五" />
+<img src="/images/posts/php/php_cs_fixer_use_step5.jpg" />
 
 此时，可以看到代码下面出现波浪线，这意味着 PHP CS Fixer 嗅探到不符合系统设置编码风格的代码（这里是 PSR-2），将光标移动到出现问题的代码位置，停留片刻会出现提示框，提示类定义、方法定义的括号不符合指定编码风格：
 
-<img src="/images/posts/php/php_cs_fixer_use_step6.jpg" width="50%" alt="步骤六" />
+<img src="/images/posts/php/php_cs_fixer_use_step6.jpg" />
 
 你可以通过点击下面的蓝色小字「PHP CS Fixer：fix the whole file」自动修复这个文件（对应的快捷键是 Option + Shift + Enter）
 
@@ -108,7 +108,7 @@ php-cs-fixer.phar fix /path/to/file
 
 当然，对于整个项目来说，如果一个个这样修复是不现实的，我们可以在 PhpStorm 中通过配置外部工具来实现批量修正指定目录的代码风格。在 Preferences、Tools、External Tools 界面点击「+」新建一个外部工具：
 
-<img src="/images/posts/php/php_cs_fixer_use_step7.png" width="50%" alt="步骤七" />
+<img src="/images/posts/php/php_cs_fixer_use_step7.png" />
 
 - Name 自定义即可
 - Program 如果是 `composer` 安装则选择 `composer` 下 `php-cs-fixer.bat` 所在的位置，Win下一般为： `C:\Users\Mr.V\AppData\Roaming\Composer\vendor\bin\php-cs-fixer.bat`，linux/mac下一般为：`~/.composer/vendor/bin/php-cs-fixer`
@@ -130,4 +130,4 @@ php-cs-fixer.phar fix /path/to/file
 
 **配置快捷键**
 
-<img src="/images/posts/php/php_cs_fixer_use_step8.png" width="50%" alt="步骤八" />
+<img src="/images/posts/php/php_cs_fixer_use_step8.png" />
