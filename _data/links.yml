@@ -1,11 +1,15 @@
 - name: php
   url: https://www.php.net/manual/zh/index.php
-  src: php
+  src: doc
+  
+- name: github
+  url: https://docs.github.com/zh
+  src: doc
 
 - name: composer
   url: https://docs.phpcomposer.com/
-  src: php
-  
+  src: doc
+
 - name: translation
   url: https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=zh-CN/
   src: google
