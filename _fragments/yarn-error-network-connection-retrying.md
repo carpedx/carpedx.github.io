@@ -20,7 +20,7 @@ keywords: yarn
 
 1）打开代理，查看自己的代理地址（比如此处我的代理是127.0.0.1:9999）
 
-<img>
+<img src="/images/fragments/yarn/network-connection-retrying_step1.jpg" />
 
 2）修改 `yarn` 和 `npm` 代理源
 
