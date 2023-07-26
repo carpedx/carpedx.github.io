@@ -108,7 +108,7 @@ php-cs-fixer.phar fix /path/to/file
 
 当然，对于整个项目来说，如果一个个这样修复是不现实的，我们可以在 PhpStorm 中通过配置外部工具来实现批量修正指定目录的代码风格。在 Preferences、Tools、External Tools 界面点击「+」新建一个外部工具：
 
-<img src="/images/posts/php/php_cs_fixer_use_step7.png" />
+<img src="/images/posts/php/php_cs_fixer_use_step7.jpg" />
 
 - Name 自定义即可
 - Program 如果是 `composer` 安装则选择 `composer` 下 `php-cs-fixer.bat` 所在的位置，Win下一般为： `C:\Users\Mr.V\AppData\Roaming\Composer\vendor\bin\php-cs-fixer.bat`，linux/mac下一般为：`~/.composer/vendor/bin/php-cs-fixer`
@@ -130,4 +130,4 @@ php-cs-fixer.phar fix /path/to/file
 
 **配置快捷键**
 
-<img src="/images/posts/php/php_cs_fixer_use_step8.png" />
+<img src="/images/posts/php/php_cs_fixer_use_step8.jpg" />
