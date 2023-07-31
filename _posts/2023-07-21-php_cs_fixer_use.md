@@ -19,7 +19,7 @@ PHP-CS-Fixer：[官方GitHub](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)，[�
 #### 安装
 
 ```
-composer global require friendsofphp/php-cs-fixer
+composer require --dev friendsofphp/php-cs-fixer
 ```
 
 
@@ -28,28 +28,44 @@ composer global require friendsofphp/php-cs-fixer
 
 ```
 # 格式化目录 如果是当前目录的话可以省略
-php-cs-fixer fix /path/to/dir
+./vendor/bin/php-cs-fixer fix /path/to/dir
 # 格式化文件
-php-cs-fixer.phar fix /path/to/file
+./vendor/bin/php-cs-fixer fix /path/to/file.php
 ```
 
 参数：
 
 - --verbose 用于展示应用了的规则
 
+  ```
+  --verbose
+  ```
+
+- --using-cache 不使用缓存
+
+  ```
+  --using-cache=no
+  ```
+
+- --config 指定配置文件
+
+  ```
+  --config=.php-cs-fixer.php
+  ```
+
 - --level 用于控制需要使用的规则层级（默认psr2）
 
   ```
-  php-cs-fixer fix /path/to/project --level=psr0
-  php-cs-fixer fix /path/to/project --level=psr1
-  php-cs-fixer fix /path/to/project --level=psr2
-  php-cs-fixer fix /path/to/project --level=symfony
+  --level=psr0
+  --level=psr1
+  --level=psr2
+  --level=symfony
   ```
 
 - --fixers 默认情况下执行的是 `PSR-2` 的所有选项以及一些附加选项（主要是 symfony 相关的）。还有一些属于『贡献级别』的选项，你可以通过 `--fixers` 选择性的添加，`--fixers` 的多个条件要用逗号分开
 
   ```
-  php-cs-fixer fix /path/to/dir --fixers=linefeed,short_tag,indentation
+  --fixers=linefeed,short_tag,indentation
   ```
 
 - -name_of_fixer 设定禁用哪些选项。如果同时设定了 `--fixers` 和 `-name_of_fixer`，前者的优先级更高
@@ -57,7 +73,7 @@ php-cs-fixer.phar fix /path/to/file
 - --dry-run 和 --diff 可以显示出需要修改的汇总，但是并不实际修改
 
   ```
-  php-cs-fixer fix --verbose --diff --dry-run
+  ./vendor/bin/php-cs-fixer fix --verbose --diff --dry-run
   ```
 
 
@@ -111,14 +127,15 @@ php-cs-fixer.phar fix /path/to/file
 <img src="/images/posts/php/php_cs_fixer_use_step7.jpg" />
 
 - Name 自定义即可
-- Program 如果是 `composer` 安装则选择 `composer` 下 `php-cs-fixer.bat` 所在的位置，Win下一般为： `C:\Users\Mr.V\AppData\Roaming\Composer\vendor\bin\php-cs-fixer.bat`，linux/mac下一般为：`~/.composer/vendor/bin/php-cs-fixer`
+- Program 如果是 `composer` 安装则选择 `composer` 下 `php-cs-fixer.bat` 所在的位置，Windows当前项目下一般为： `D:\project\vendor\bin\php-cs-fixer.bat`，linux/mac下一般为：`~/.composer/vendor/bin/php-cs-fixer`
 
 - Arguments 
 
   ```
   --verbose fix "$FileDir$/$FileName$"
-  # --config=D:\projects\PhpstormProjects\supports\.php-cs-fixer.php 默认会查找项目根目录下的 .php-cs-fixer 文件
   ```
+
+  > --config=D:\projects\PhpstormProjects\supports\.php-cs-fixer.php 默认会查找项目根目录下的 .php-cs-fixer 文件
 
 - Working directory 工作目录
 
