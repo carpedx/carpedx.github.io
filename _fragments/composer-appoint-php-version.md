@@ -12,7 +12,7 @@ keywords: composer, php
 
 
 
-## 方案一（修改环境变量）`不推荐`
+## 方案一（修改环境变量）
 
 #### composer 使用的是 "环境变量" 里面的php，所以使用 `php -v` 查看系统php版本，切换php版本可以修改环境变量后重启
 
@@ -20,7 +20,7 @@ keywords: composer, php
 
 
 
-## 方案二（下载Composer）`推荐`
+## 方案二（下载Composer）
 
 #### 下载Composer [[官方下载链接]](https://getcomposer.org/download/)
 
