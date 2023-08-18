@@ -16,7 +16,7 @@ keywords: python
 
 
 
-```
+```python
 from PIL import Image
 from numpy import average, dot, linalg
 

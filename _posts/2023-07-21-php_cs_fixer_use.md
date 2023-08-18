@@ -18,7 +18,7 @@ PHP-CS-Fixer：[官方GitHub](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)，[�
 
 #### 安装
 
-```
+```shell
 composer require --dev friendsofphp/php-cs-fixer
 ```
 
@@ -26,7 +26,7 @@ composer require --dev friendsofphp/php-cs-fixer
 
 #### 命令行使用
 
-```
+```shell
 # 格式化目录 如果是当前目录的话可以省略
 ./vendor/bin/php-cs-fixer fix /path/to/dir
 # 格式化文件
@@ -37,25 +37,25 @@ composer require --dev friendsofphp/php-cs-fixer
 
 - --verbose 用于展示应用了的规则
 
-  ```
+  ```shell
   --verbose
   ```
 
 - --using-cache 不使用缓存
 
-  ```
+  ```shell
   --using-cache=no
   ```
 
 - --config 指定配置文件
 
-  ```
+  ```shell
   --config=.php-cs-fixer.php
   ```
 
 - --level 用于控制需要使用的规则层级（默认psr2）
 
-  ```
+  ```shell
   --level=psr0
   --level=psr1
   --level=psr2
@@ -64,7 +64,7 @@ composer require --dev friendsofphp/php-cs-fixer
 
 - --fixers 默认情况下执行的是 `PSR-2` 的所有选项以及一些附加选项（主要是 symfony 相关的）。还有一些属于『贡献级别』的选项，你可以通过 `--fixers` 选择性的添加，`--fixers` 的多个条件要用逗号分开
 
-  ```
+  ```shell
   --fixers=linefeed,short_tag,indentation
   ```
 
@@ -72,7 +72,7 @@ composer require --dev friendsofphp/php-cs-fixer
 
 - --dry-run 和 --diff 可以显示出需要修改的汇总，但是并不实际修改
 
-  ```
+  ```shell
   ./vendor/bin/php-cs-fixer fix --verbose --diff --dry-run
   ```
 
@@ -131,7 +131,7 @@ composer require --dev friendsofphp/php-cs-fixer
 
 - Arguments 
 
-  ```
+  ```shell
   --verbose fix "$FileDir$/$FileName$"
   ```
 
@@ -139,7 +139,7 @@ composer require --dev friendsofphp/php-cs-fixer
 
 - Working directory 工作目录
 
-  ```
+  ```shell
   $ProjectFileDir$
   ```
 

@@ -16,7 +16,7 @@ keywords: python
 
 
 
-```
+```python
 import time
 
 time_list = ['2023-07-01 16:14:00','2023-07-01 10:17:00']

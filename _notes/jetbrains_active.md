@@ -43,7 +43,7 @@ keywords: JetBrains, PHPStorm
 
 
 7）将phpstorm中的bin开始文件.vmoptions文件加入固定参数 和 激活用的jia包
-```
+```shell
 --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
 --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
 -javaagent:D:/develop/JetBrains/ja-netfilter.v3.1/ja-netfilter.jar

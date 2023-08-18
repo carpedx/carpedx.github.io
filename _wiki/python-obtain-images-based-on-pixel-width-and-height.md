@@ -16,7 +16,7 @@ keywords: python
 
 
 
-```
+```python
 from PIL import Image
 import os
 

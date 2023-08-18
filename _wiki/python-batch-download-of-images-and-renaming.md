@@ -16,7 +16,7 @@ keywords: python
 
 
 
-```
+```python
 import requests
 
 urls = ['https://carpedx.com/images/5eb4d75agw1e28yri0h5fa.jpg','https://carpedx.com/images/5eb4d75agw1e28yri0h5fb.jpg']

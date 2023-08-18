@@ -28,7 +28,7 @@ keywords: composer, php
 
 #### 执行如下命令：
 
-```
+```shell
 D:\develop\phpstudy_pro\Extensions\php\php8.0.2nts\php.exe composer.phar update
 ```
 
@@ -42,7 +42,7 @@ D:\develop\phpstudy_pro\Extensions\php\php8.0.2nts\php.exe composer.phar update
 
 composer8.bat内容如下：
 
-```
+```shell
 @echo OFF
 :: in case DelayedExpansion is on and a path contains ! 
 setlocal DISABLEDELAYEDEXPANSION

@@ -20,7 +20,7 @@ PHPStan：[官方GitHub](https://github.com/phpstan/phpstan)，[官方文档](ht
 
 #### 安装
 
-```
+```shell
 composer require --dev phpstan/phpstan
 ```
 
@@ -28,13 +28,13 @@ composer require --dev phpstan/phpstan
 
 #### 分析代码
 
-```
+```shell
 vendor\bin\phpstan analyse [options] [<paths>...]
 ```
 
 可以传递一个或多个 PHP 文件或目录的路径，并用空格分隔。例：
 
-```
+```shell
 vendor\bin\phpstan analyse src tests
 ```
 
@@ -46,7 +46,7 @@ vendor\bin\phpstan analyse src tests
 
 > 0 是最宽松的，9 是最严格的
 
-```
+```shell
 vendor\bin\phpstan analyse -l src tests
 ```
 
@@ -56,7 +56,7 @@ vendor\bin\phpstan analyse -l src tests
 
   > PHPStan使用名为NEON的配置格式。[[配置参考]](https://phpstan.org/config-reference)
 
-```
+```shell
 vendor\bin\phpstan analyse -c phpstan.neon
 ```
 
@@ -66,7 +66,7 @@ vendor\bin\phpstan analyse -c phpstan.neon
 
   > 将当前报告的错误列表声明为“基线”，并使其在后续运行中不被报告
 
-```
+```shell
 vendor\bin\phpstan analyse --level 7 \
   --configuration phpstan.neon \
   src tests --generate-baseline
@@ -78,7 +78,7 @@ vendor\bin\phpstan analyse --level 7 \
 
   > 如果您的依赖项安装在不同的路径上，或者您正在从不同的目录运行PHPStan，您可以使用--autooload-file来指定自动加载程序的路径
 
-```
+```shell
 vendor\bin\phpstan analyse \
   --autoload-file=/path/to/autoload.php \
   src tests
@@ -90,7 +90,7 @@ vendor\bin\phpstan analyse \
 
   > 支持不同的输出格式。[了解有关输出格式更多信息](https://phpstan.org/user-guide/output-format)
 
-```
+```tex
 您可以将以下关键字传递给命令--error-format=X 以影响输出
 ```
 
@@ -98,7 +98,7 @@ vendor\bin\phpstan analyse \
 
 - --memory-limit
 
-```
+```shell
 --memory-limit 1G
 ```
 
@@ -146,7 +146,7 @@ vendor/bin/phpstan不带参数运行需要满足以下条件：
 
 **phpstan.neon:**
 
-```
+```properties
 parameters:
 	level: 6
 	paths:

@@ -18,7 +18,7 @@ keywords: python
 
 
 
-```
+```python
 import os
 
 path = "D:\\test"

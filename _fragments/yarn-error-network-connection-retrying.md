@@ -26,12 +26,12 @@ keywords: yarn
 
 npm：
 
-```
+```shell
 npm config set proxy http://127.0.0.1:9999
 npm config set https-proxy http://127.0.0.1:9999
 ```
 
-```
+```shell
 yarn config set proxy http://127.0.0.1:9999
 yarn config set https-proxy http://127.0.0.1:9999
 ```
@@ -42,14 +42,14 @@ yarn config set https-proxy http://127.0.0.1:9999
 
 淘宝源：
 
-```
+```shell
 npm config set registry http://registry.npm.taobao.org/
 yarn config set registry http://registry.npm.taobao.org/
 ```
 
 官方源：
 
-```
+```shell
 npm config set registry https://registry.npmjs.org/
 yarn config set registry https://registry.npmjs.org/
 ```
@@ -62,14 +62,14 @@ yarn config set registry https://registry.npmjs.org/
 
 npm删除代理
 
-```
+```shell
 npm config delete proxy
 npm config delete https-proxy
 ```
 
 yarn删除代理
 
-```
+```shell
 yarn config delete proxy
 yarn config delete https-proxy
 ```
@@ -82,19 +82,19 @@ yarn config delete https-proxy
 
 查看npm全局已安装
 
-```
+```shell
 npm ls -g
 ```
 
 卸载yarn命令
 
-```
+```shell
 npm uninstall -g yarn
 ```
 
 安装yarn命令
 
-```
+```shell
 npm install -g yarn
 ```
 
@@ -104,11 +104,11 @@ npm install -g yarn
 
 非 Windows 系统下如果 `npm uninstall -g yarn` 之后，`yarn` 还是可用的，可以尝试手动删除
 
-```
+```shell
 rm -rf /usr/local/lib/node_modules/yarn
 ```
 
-```
+```shell
 rm -rf /usr/local/bin/yarn yarnpkg
 ```
 

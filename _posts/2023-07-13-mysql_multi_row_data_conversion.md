@@ -22,7 +22,7 @@ keywords: excel
 
 **第一步：加单引号和逗号** 
 
-```
+```shell
 ="'"&A1&"',"
 ```
 <img src="/images/posts/excel/mysql_multi_row_data_conversion_step2.webp" width="50%" alt="步骤一" />
@@ -37,7 +37,7 @@ keywords: excel
 
 **第三步：使用函数 PHONETIC 拼接为一个单元格**
 
-```
+```shell
 =PHONETIC(C1:C100)
 ```
 <img src="/images/posts/excel/mysql_multi_row_data_conversion_step4.webp" width="50%" alt="步骤三" />

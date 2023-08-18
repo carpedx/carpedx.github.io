@@ -16,7 +16,7 @@ keywords: python
 
 
 
-```
+```python
 import os
 
 old_names = ['1.mp4','2.mp4']

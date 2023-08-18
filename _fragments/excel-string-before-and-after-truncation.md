@@ -12,20 +12,20 @@ keywords: excel
 
 如：
 
-```
+```tex
 <img src=""/><br/>carpedx
 想得到<br/>前面的字符（不包括<br/>）
 ```
 
 使用：
 
-```
+```shell
 =LEFT(A1,FIND("<br/>",A1)-1)
 ```
 
 会得到：
 
-```
+```tex
 <img src=""/>
 ```
 
@@ -35,20 +35,20 @@ keywords: excel
 
 如：
 
-```
+```tex
 <img src=""/><br/>carpedx
 想得到<br/>后面的字符（不包括<br/>）
 ```
 
 使用：
 
-```
+```shell
 =MID(A1,FIND("<br/>",A1)+5,50)
 ```
 
 会得到：
 
-```
+```tex
 carpedx
 ```
 
