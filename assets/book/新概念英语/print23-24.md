@@ -50,8 +50,19 @@ The one on the table	桌子上的那个
 
 /pleɪt/	plate	盘子
 
-The plate is on the table.
+The plates are on the table.	盘子在桌子上
 
-Is the plate on the table?
+Are the plates on the table?	盘子在桌子上吗？
 
-Where is the plate?
+Where are the plates?	盘子在哪里？
+
+Give me some plates, please.	请给我一些盘子
+
+Which ones?	哪个？
+
+The ones on the table.	桌子上的那些
+
+
+
+/ˈkʌbəd/	cupboard	橱柜
+
