@@ -37,3 +37,23 @@ permalink: /links/
   {% endif %}
 {% endfor %}
 </ul>
+
+> Linux Related software
+
+<ul>
+{% for link in site.data.links %}
+  {% if link.src == 'linux' %}
+  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+> Docker Related software
+
+<ul>
+{% for link in site.data.links %}
+  {% if link.src == 'docker' %}
+  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>

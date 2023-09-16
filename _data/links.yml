@@ -29,3 +29,19 @@
 - name: ladder
   url: https://sunwk.fun/
   src: vpn
+
+- name: centos
+  url: https://centos.org/
+  src: linux
+
+- name: vmware
+  url: https://www.vmware.com/
+  src: linux
+
+- name: xshell
+  url: https://www.xshell.com/
+  src: linux
+
+- name: portainer
+  url: https://www.portainer.io/
+  src: docker
