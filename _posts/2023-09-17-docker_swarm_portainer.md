@@ -14,7 +14,45 @@ keywords: linux, docker, swarm, portainer
 
 
 
-## Docker Swarm
+## Docker
+
+更新 yum
+
+```shell
+yum -y update
+```
+
+centos8 默认使用 podman 代替 docker，所以需要 containerd.io
+
+```shell
+yum install https://download.docker.com/linux/fedora/30/x86_64/stable/Packages/containerd.io-1.2.6-3.3.fc30.x86_64.rpm
+```
+
+安装一些其他依赖
+
+```
+yum install -y yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+安装 Docker
+
+```
+yum install -y docker-ce 
+```
+
+启动并设置开机自启
+
+```
+systemctl enable docker
+systemctl start docker
+```
+
+
+
+
+
+## Swarm
 
 
 
@@ -58,8 +96,6 @@ docker swarm join --token SWMTKN-1-2xtsbqoj5p88aqe4l9ii4ry04mwx397cpdkirz8wacvzg
 ```shell
 docker node ls
 ```
-
-
 
 
 

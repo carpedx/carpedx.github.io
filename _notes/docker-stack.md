@@ -1,3 +1,56 @@
+`/root/docker-portainer/docker-stack.yml`：
+
+```shell
+version: '3.2'
+
+services:
+  agent:
+    image: portainer/agent:2.5.1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+    networks:
+      - carpedx-network
+    deploy:
+      mode: global
+      placement:
+        constraints: [node.platform.os == linux]
+
+  portainer:
+    image: portainer/portainer-ce:2.5.1
+    command: -H tcp://tasks.agent:9001 --tlsskipverify
+    ports:
+      - "9000:9000"
+      - "8000:8000"
+    volumes:
+      - portainer_data:/data
+    logging:
+      options:
+        max-size: 50m
+    networks:
+      - carpedx-network
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  carpedx-network:
+    external: true
+
+volumes:
+  portainer_data:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.31.100,vers=4,soft,timeo=180,bg,tcp,rw"
+      device: "192.168.31.100:/data/nfs/storage/portainer_data"
+```
+
+
+
+
+
 `/root/docker-nginx/docker-stack.yml` ：
 
 ```shell
@@ -61,6 +114,8 @@ volumes:
       o: "addr=192.168.31.100,vers=4,soft,timeo=180,bg,tcp,rw"
       device: "192.168.31.100:/data/nfs/log/nginx"
 ```
+
+
 
 
 
