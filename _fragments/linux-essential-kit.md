@@ -1,0 +1,93 @@
+---
+layout: fragment
+title: linux系统必备工具
+tags: [linux]
+description: linux系统必备工具
+keywords: linux
+---
+
+
+
+安装 epel-release 包管理器
+
+```shell
+yum install -y epel-release
+```
+
+
+
+工具包合集，包含 ifconfig 等命令
+
+```shell
+yum install -y net-tools
+```
+
+
+
+vim 编辑器
+
+```shell
+yum install -y vim
+```
+
+
+
+关闭防火墙，关闭防火墙开机自启
+
+```shell
+systemctl stop firewalld
+systemctl disable firewalld.service
+```
+
+
+
+
+创建 test 用户，并修改 test 用户密码
+
+```shell
+useradd test
+passwd 123456
+```
+
+
+
+
+配置 test 用户具有 root 权限，方便后期加 sudo 执行 root 权限的命令
+
+```shell
+vim /etc/sudoers
+```
+
+在%wheel这行下面添加一行：
+
+```shell
+## Allows people in group wheel to run all commands
+%wheel  ALL=(ALL)       ALL
+
+test ALL=(ALL)       NOPASSWD:ALL
+```
+
+
+
+卸载虚拟机自带的JDK
+
+```shell
+rpm -qa | grep -i java | xargs -n1 rpm -e --nodeps
+```
+
+> rpm -qa：查询所安装的所有rpm软件包
+>
+> grep -i：忽略大小写
+>
+> xargs -n1：表示每次只传递一个参数
+>
+> rpm -e --nodeps：强制卸载软件
+
+
+
+重启虚拟机
+
+```shell
+reboot
+```
+
