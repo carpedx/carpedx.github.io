@@ -68,7 +68,7 @@ services:
       - www_dir:/var/www
       - log_dir:/data/log
     networks:
-      - wsdnet
+      - carpedx-network
     sysctls:
       - net.ipv4.vs.conn_reuse_mode=0
       - net.ipv4.vs.expire_nodest_conn=1
@@ -83,7 +83,7 @@ services:
     volumes:
       - www_dir:/var/www
     networks:
-      - wsdnet
+      - carpedx-network
     sysctls:
       - net.ipv4.vs.conn_reuse_mode=0
       - net.ipv4.vs.expire_nodest_conn=1
@@ -92,7 +92,7 @@ services:
       replicas: 4
 
 networks:
-  wsdnet:
+  carpedx-network:
     external: true
 
 volumes:
@@ -246,7 +246,7 @@ services:
       # Force publishing on the 'elk' overlay.
       network.publish_host: _eth0_
     networks:
-      - wsdnet
+      - carpedx-network
     deploy:
       mode: replicated
       replicas: 1
@@ -265,7 +265,7 @@ services:
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
-      - wsdnet
+      - carpedx-network
     deploy:
       mode: replicated
       replicas: 1
@@ -278,7 +278,7 @@ services:
       - source: kibana_config
         target: /usr/share/kibana/config/kibana.yml
     networks:
-      - wsdnet
+      - carpedx-network
     deploy:
       mode: replicated
       replicas: 1
@@ -295,7 +295,7 @@ services:
     ports:
       - '8200:8200'
     networks:
-      - wsdnet
+      - carpedx-network
     depends_on:
       - elasticsearch
     deploy:
@@ -316,7 +316,7 @@ services:
       - filebeat_data:/usr/share/filebeat/data
       - log_data:/data
     networks:
-      - wsdnet
+      - carpedx-network
     depends_on:
       - logstash
     deploy:
@@ -341,7 +341,7 @@ configs:
     file: ./extensions/apm-server/config/apm-server.yml
 
 networks:
-  wsdnet:
+  carpedx-network:
     external: true
 ```
 
