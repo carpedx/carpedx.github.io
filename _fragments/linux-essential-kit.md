@@ -8,6 +8,14 @@ keywords: linux
 
 
 
+可选：下载并安装系统中所有可用的更新，包括安全更新、bug 修复和新功能：
+
+```shell
+yum -y update
+```
+
+
+
 安装 epel-release 包管理器
 
 ```shell

@@ -16,7 +16,7 @@ keywords: linux, docker, swarm, portainer
 
 ## Docker
 
-更新 yum
+下载并安装系统中所有可用的更新，包括安全更新、bug 修复和新功能：
 
 ```shell
 yum -y update
@@ -117,7 +117,7 @@ docker network create --driver overlay carpedx-network
 
 `/root/docker-portainer/docker-stack.yml` 内容如下：
 
-```shell
+```yaml
 version: '3.2'
 
 services:
@@ -188,6 +188,6 @@ docker stack deploy -c docker-stack.yml mon
 
 
 
-> 如果一直不能访问可以尝试重启 Docker：
+> 如果一直不能访问可以尝试重启 Docker 后重新配置：
 >
 > `systemctl restart docker`

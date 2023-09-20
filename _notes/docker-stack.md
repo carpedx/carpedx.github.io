@@ -1,6 +1,6 @@
 `/root/docker-portainer/docker-stack.yml`：
 
-```shell
+```yaml
 version: '3.2'
 
 services:
@@ -53,7 +53,7 @@ volumes:
 
 `/root/docker-nginx/docker-stack.yml` ：
 
-```shell
+```yaml
 version: '3.2'
 
 services:
@@ -121,7 +121,7 @@ volumes:
 
 `/root/docker-elk/docker-compose.yml` ：
 
-```shell
+```yaml
 version: '3.2'
 
 services:
@@ -205,7 +205,7 @@ volumes:
 
 ``/root/docker-elk/docker-stack.yml` ：
 
-```shell
+```yaml
 version: '3.3'
 
 volumes:

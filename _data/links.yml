@@ -14,6 +14,10 @@
   url: https://vitejs.cn/vitepress/
   src: doc
 
+- name: showdoc
+  url: https://www.showdoc.com.cn/
+  src: doc
+
 - name: translation
   url: https://chrome.google.com/webstore/detail/imtranslator-translator-d/noaijdpnepcgjemiklgfkcfbkokogabh?hl=zh-CN
   src: google
