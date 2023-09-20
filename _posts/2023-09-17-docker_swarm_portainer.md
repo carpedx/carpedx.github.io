@@ -99,6 +99,14 @@ docker node ls
 
 
 
+关闭推出集群
+
+```shell
+docker swarm leave --force
+```
+
+
+
 
 
 ## Portainer
