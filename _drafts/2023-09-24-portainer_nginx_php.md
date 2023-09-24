@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Portainer搭建Nginx+PHP环境
+title: 使用Portainer搭建Nginx+PHP环境
 categories: docker
-description: Portainer搭建Nginx+PHP环境
+description: 使用Portainer搭建Nginx+PHP环境
 keywords: linux, docker, portainer, nginx, php, openresty
 ---
 
@@ -22,13 +22,11 @@ keywords: linux, docker, portainer, nginx, php, openresty
 
 
 
-## 配置环境
+## 搭建
 
-#### Create stack：
+<img src="/images/posts/docker/portainer_nginx_php_step1.jpg" />
 
-<img src="/images/posts/linux/docker_portainer_crontab_showdoc_step1.jpg" />
-
-<img src="/images/posts/linux/docker_portainer_crontab_showdoc_step2.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step2.jpg" />
 
 `Editor` 内容如下：
 
@@ -55,10 +53,10 @@ services:
       - net.ipv4.vs.expire_nodest_conn=1
     deploy:
       mode: replicated
-      replicas: 4
+      replicas: 2
 
   php:
-    image: registry.cn-hangzhou.aliyuncs.com/carpe/php:7.4-fpm
+    image: registry.cn-hangzhou.aliyuncs.com/tanwb/php:7.4-fpm
     command: supervisord -n
     ports:
       - "7000:9000"
@@ -80,12 +78,12 @@ services:
       - net.ipv4.vs.expire_nodest_conn=1
     deploy:
       mode: replicated
-      replicas: 4
-      
+      replicas: 2
+
 networks:
   carpedx-network:
     external: true
-    
+
 volumes:
   nginx_config:
     driver_opts:
@@ -110,7 +108,7 @@ volumes:
       type: "nfs"
       o: "addr=192.168.31.100,vers=4,soft,timeo=180,bg,tcp,rw"
       device: "192.168.31.100:/data/nfs/conf/crontab"
-      
+
   php_config:
     driver_opts:
       type: "nfs"
@@ -145,32 +143,81 @@ volumes:
 
 
 
-创建成功：
+创建成功如下：
 
-<img src="/images/posts/linux/docker_portainer_crontab_showdoc_step3.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step3.jpg" />
 
+测试访问 `http://192.168.31.101/` 网页如下：
 
-
-## 安装 showdoc
-
-
-
-> 相关链接：[showdoc API](https://www.showdoc.com.cn/)
+<img src="/images/posts/docker/portainer_nginx_php_step4.jpg" />
 
 
 
-NFS服务器（192.168.31.100）上， `/data/nfs/www` 目录下 将 `showdoc` 放上（使用 `git clone` 或 `Xftp`）：
-
-<img src="/images/posts/linux/docker_portainer_crontab_showdoc_step4.jpg" />
-
-> 文件夹改个名，方便后续操作：`mv showdoc-3.2.2 showdoc`
+## 配置
 
 
 
-192.168.31.101
+在 `/data/nfs/www` 创建 index.php 测试文件，内容为：
 
-192.168.31.102
+```php
+<?php
 
-安装PHP、nginx、php-fpm
+phpinfo();
 
-/etc/hosts
+echo '<pre>';
+print_r($_SERVER);
+echo '</pre>';
+```
+
+
+
+修改 `/data/nfs/conf/nginx/conf.d/default.conf ` 文件内容为：
+
+```tex
+server {
+  listen		80;
+  server_name		localhost;
+
+  set $root_path	/var/www;
+
+  root			$root_path;
+  index			index.php index.htm index.html;
+
+  location / {
+    if (!-e $request_filename) {
+      rewrite  ^(.*)$  /index.php?s=/$1  last;
+    }
+  }
+
+  location ~ \.php$ {
+    try_files $uri = 404;
+    fastcgi_pass   php:9000;
+    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    include        fastcgi_params;
+  }
+}
+```
+
+
+
+在 `/data/nfs/conf/supervisord` 目录下创建 `supervisord.conf` 文件：
+
+```tex
+[program:php]
+command = docker-php-entrypoint php-fpm
+loglevel=warn
+stdout_logfile=none
+stderr_logfile=none
+```
+
+
+
+重启 Docker Nginx 和 PHP：
+
+<img src="/images/posts/docker/portainer_nginx_php_step5.jpg" />
+
+
+
+再次测试访问 `http://192.168.31.101/` 应该如下：
+
+<img src="/images/posts/docker/portainer_nginx_php_step6.jpg" />
