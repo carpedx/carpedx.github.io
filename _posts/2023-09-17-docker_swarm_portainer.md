@@ -99,7 +99,7 @@ docker node ls
 
 
 
-关闭推出集群
+关闭退出集群
 
 ```shell
 docker swarm leave --force
