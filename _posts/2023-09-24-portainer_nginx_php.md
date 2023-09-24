@@ -126,19 +126,17 @@ volumes:
 
 > `registry.cn-hangzhou.aliyuncs.com/carpe/php:7.4-fpm` 的镜像内容是根据 [carpedx/docker-php](https://github.com/carpedx/docker-php/blob/main/7.4/fpm/bullseye/Dockerfile) 创建的。
 >
-> `php.ini` 增加了：`session.save_path = /sessionpath`
->
 > `Dockerfile` 增加了：
 >
 > ```yaml
-> # 安装包管理器 Supervisor
+># 安装包管理器 Supervisor
 > apt-get install -y --no-install-recommends supervisor
 > # 安装定时任务 Cron
 > apt-get install -y cron
 > ```
->
+> 
 > > 如果你要根据此 `Dockerfile` 创建自己的镜像请注意，可能会在执行 `docker build -t my-image .` 时报网络连接异常，此时可能需要设置 `docker dns` ：
-> >
+>>
 > > `daemon.json` 中增加：`"dns":["8.8.8.8","8.8.4.4"]`
 
 
