@@ -46,10 +46,6 @@
   url: https://www.xshell.com/
   src: linux
 
-- name: portainer
-  url: https://www.portainer.io/
-  src: docker
-
 - name: convertio
   url: https://convertio.co/zh/video-converter/
   src: media
