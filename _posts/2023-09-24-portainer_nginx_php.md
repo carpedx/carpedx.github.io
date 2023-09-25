@@ -24,9 +24,9 @@ keywords: linux, docker, portainer, nginx, php, openresty
 
 ## 搭建
 
-<img src="/images/posts/docker/portainer_nginx_php_step1.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step1.webp" />
 
-<img src="/images/posts/docker/portainer_nginx_php_step2.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step2.webp" />
 
 `Editor` 内容如下：
 
@@ -143,11 +143,11 @@ volumes:
 
 创建成功如下：
 
-<img src="/images/posts/docker/portainer_nginx_php_step3.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step3.webp" />
 
 测试访问 `http://192.168.31.101/` 网页如下：
 
-<img src="/images/posts/docker/portainer_nginx_php_step4.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step4.webp" />
 
 
 
@@ -212,10 +212,10 @@ stderr_logfile=none
 
 重启 Docker Nginx 和 PHP：
 
-<img src="/images/posts/docker/portainer_nginx_php_step5.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step5.webp" />
 
 
 
 再次测试访问 `http://192.168.31.101/` 应该如下：
 
-<img src="/images/posts/docker/portainer_nginx_php_step6.jpg" />
+<img src="/images/posts/docker/portainer_nginx_php_step6.webp" />
