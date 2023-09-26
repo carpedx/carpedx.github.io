@@ -18,6 +18,10 @@
   url: https://www.showdoc.com.cn/
   src: doc
 
+- name: leetcode
+  url: https://leetcode.cn/
+  src: study
+
 - name: acwing
   url: https://www.acwing.com/
   src: study
