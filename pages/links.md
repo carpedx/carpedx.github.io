@@ -18,11 +18,11 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Google Browser Plugin
+> Learning Website
 
 <ul>
 {% for link in site.data.links %}
-  {% if link.src == 'google' %}
+  {% if link.src == 'study' %}
   <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
   {% endif %}
 {% endfor %}

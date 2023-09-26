@@ -18,21 +18,9 @@
   url: https://www.showdoc.com.cn/
   src: doc
 
-- name: translation
-  url: https://chrome.google.com/webstore/detail/imtranslator-translator-d/noaijdpnepcgjemiklgfkcfbkokogabh?hl=zh-CN
-  src: google
-
-- name: ladder
-  url: https://ikuuu.club/
-  src: vpn
-
-- name: ladder
-  url: https://web.xjh23.top/#/login/
-  src: vpn
-
-- name: ladder
-  url: https://sunwk.fun/
-  src: vpn
+- name: acwing
+  url: https://www.acwing.com/
+  src: study
 
 - name: centos
   url: https://centos.org/
@@ -65,3 +53,15 @@
 - name: 67tool
   url: https://www.67tool.com/video/convert?to=mp4&type=all
   src: media
+
+- name: ladder
+  url: https://ikuuu.club/
+  src: vpn
+
+- name: ladder
+  url: https://web.xjh23.top/#/login/
+  src: vpn
+
+- name: ladder
+  url: https://sunwk.fun/
+  src: vpn
