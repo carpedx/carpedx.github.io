@@ -200,6 +200,8 @@ server {
 
 在 `/data/nfs/conf/supervisord` 目录下创建 `supervisord.conf` 文件：
 
+> supervisor 可参考另一篇文章：[PHP使用Spudervisor管理进程](https://carpedx.com/2023/07/11/php_spudervisor/)
+
 ```tex
 [program:php]
 command = docker-php-entrypoint php-fpm
