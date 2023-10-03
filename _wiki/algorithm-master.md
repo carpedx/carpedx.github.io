@@ -43,7 +43,7 @@ public static int process(int[] arr, int L, int R) {
     // 递归调用process函数，求解右半部分[mid+1...R]的最大值  
     int rightMax = process(arr, mid + 1, R); 
     
-    // 合并左右两部分的最大值，返回整个范围的最大值
+    // 得到左右两部分的最大值
     return Math.max(leftMax, rightMax);  
 }
 ```

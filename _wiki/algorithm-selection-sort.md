@@ -19,6 +19,12 @@ keywords: algorithm
 
 
 
+**动图演示**
+
+<img src="/images/wiki/algorithm/algorithm-selection-sort_step1.webp"  />
+
+
+
 **java**
 
 ```java

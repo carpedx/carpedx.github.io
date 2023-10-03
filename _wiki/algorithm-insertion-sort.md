@@ -21,6 +21,12 @@ keywords: algorithm
 
 
 
+**动图演示**
+
+<img src="/images/wiki/algorithm/algorithm-insertion-sort_step1.gif"  />
+
+
+
 ```java
 public static void insertionSort(int[] arr) {
     // 如果数组为空或长度小于2，则直接返回，无需排序 

@@ -15,6 +15,12 @@ keywords: algorithm
 
 
 
+**动图演示**
+
+<img src="/images/wiki/algorithm/algorithm-bubble-sort_step1.gif"  />
+
+
+
 **java**
 
 ```java

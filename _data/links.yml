@@ -26,6 +26,10 @@
   url: https://www.acwing.com/
   src: study
 
+- name: cnblogs
+  url: https://www.cnblogs.com/
+  src: study
+
 - name: centos
   url: https://centos.org/
   src: linux
