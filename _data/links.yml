@@ -18,6 +18,10 @@
   url: https://www.showdoc.com.cn/
   src: doc
 
+- name: processon
+  url: https://www.processon.com/
+  src: study
+
 - name: leetcode
   url: https://leetcode.cn/
   src: study
@@ -60,6 +64,10 @@
 
 - name: 67tool
   url: https://www.67tool.com/video/convert?to=mp4&type=all
+  src: media
+
+- name: onepdf
+  url: https://www.onepdf.online/
   src: media
 
 - name: ladder
