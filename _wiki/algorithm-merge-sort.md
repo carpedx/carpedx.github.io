@@ -9,29 +9,47 @@ keywords: algorithm
 
 
 
-**归并排序：直接将以数组的中心位置作为分界点，不断取中间位置，分成两个小区间，直到无法分解**
+**归并排序：是创建在归并操作上的一种有效的排序算法。算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。归并排序思路简单，速度仅次于快速排序，为稳定排序算法，一般用于对总体无序，但是各子项相对有序的数列。**
 
 ------
 
 
 
-**思路流程**
+#### 基本思想
 
-先分解：
+归并排序是用分治思想，分治模式在每一层递归上有三个步骤：
 
-将数组分解至无法继续往下分解
-
-<img src="/images/wiki/algorithm/algorithm-merge-sort_step1.jpg"  />
-
-在排序：
-
-排序时，从最底层开始排序
-
-<img src="/images/wiki/algorithm/algorithm-merge-sort_step2.jpg"  />
+- 分解（Divide）：将n个元素分成个含n/2个元素的子序列。
+- 解决（Conquer）*：用合并排序法对两个子序列递归的排序。
+- 合并（Combine）：合并两个已排序的子序列已得到排序结果。
 
 
 
-**java**
+#### 实现逻辑
+
+递归法
+
+① 将序列每相邻两个数字进行归并操作，形成floor(n/2)个序列，排序后每个序列包含两个元素
+② 将上述序列再次归并，形成floor(n/4)个序列，每个序列包含四个元素
+③ 重复步骤②，直到所有元素排序完毕
+
+迭代法
+
+① 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列
+② 设定两个指针，最初位置分别为两个已经排序序列的起始位置
+③ 比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置
+④ 重复步骤③直到某一指针到达序列尾
+⑤ 将另一序列剩下的所有元素直接复制到合并序列尾
+
+
+
+#### 动图演示
+
+<img src="/images/wiki/algorithm/algorithm-merge-sort_step1.gif"  />
+
+
+
+#### java
 
 ```java
 public static void main(String[] args) {
@@ -94,5 +112,27 @@ public static void merge(int[] arr, int L, int M, int R) {
         arr[L + i] = help[i];
     }
 }
+```
+
+
+
+#### 用Master公式分析时间复杂度：
+
+1）用[Master公式](https://carpedx.com/wiki/algorithm-master/)计算上面`归并排序`的时间复杂度公式为：`T(N)=2*T(N/2)+O(N^1)`
+
+> 根据这个公式可知：a=2，b=2，d=1
+
+
+
+2）计算结果（对应公式 `log(b,a)=d	时间复杂度为O(N*logN)`）：
+
+```tex
+# log(2,2) = 1
+log(b,a) = d
+
+# O(N*logN)
+O(N*logN)	# 结果为 O(N*logN)
+
+所以时间复杂度为：O(N*logN)
 ```
 

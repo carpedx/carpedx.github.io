@@ -52,7 +52,7 @@ public static int process(int[] arr, int L, int R) {
 
 #### Master公式
 
-计算公式：T(N) = a * T(N/b) + O(N^d)
+计算公式：`T(N)=a*T(N/b)+O(N^d)`
 
 > T(N) 表示母问题和数据规模，比如在上面二分查找中就是 `public static int process(int[] arr, int L, int R)`
 >
@@ -66,30 +66,31 @@ public static int process(int[] arr, int L, int R) {
 
 根据a、b、d的不同情况进行不同的时间复杂度估算结果如下：
 
-log(b, a) > d	时间复杂度为O(N^log(b, a))
+```tex
+log(b,a)>d	时间复杂度为O(N^log(b,a))
+log(b,a)=d	时间复杂度为O(N^d*logN)
+log(b,a)<d	时间复杂度为O(N^d)
+```
 
-log(b, a) = d	时间复杂度为O(N^d * logN)
-
-log(b, a) < d	时间复杂度为O(N^d)
 
 
+#### 用Master公式分析时间复杂度
 
-#### 用Master公式分析二分查找最大值算法
-
-1）用Master公式计算二分查找最大值的时间复杂度公式为：T(N) = 2 * T(N/2) + O(1^0)
+1）用Master公式计算上面`二分查找最大值`的时间复杂度公式为：`T(N)=2*T(N/2)+O(1^0)`
 
 > 根据这个公式可知：a=2，b=2，d=0
 
 
 
-2）计算结果（对应公式 `log(b, a) > d	时间复杂度为O(N^log(b, a))`）：
+2）计算结果（对应公式 `log(b,a)>d	时间复杂度为O(N^log(b,a))`）：
 
 ```tex
-# log(2, 2) = 1
-# 1 > 0
-log(2, 2) > 0
+# log(2,2)>0
+log(b,a)>d
 
-O(N^log(2, 2))	# 结果为 O(N^1)
+# O(N^log(2,2))
+O(N^log(b,a))	# 结果为 O(N^1)
 
-所以时间复杂度为：O(N^1)
+所以时间复杂度为：O(N)
 ```
+
