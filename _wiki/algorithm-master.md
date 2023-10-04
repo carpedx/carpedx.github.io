@@ -37,7 +37,7 @@ public static int process(int[] arr, int L, int R) {
     if (L == R) return arr[L];  
 
     // 计算范围的中间点索引，使用位运算加速计算
-    int mid = L + ((R -L) >> 1);    // 中间点索引
+    int mid = L + ((R - L) >> 1);    // 中间点索引
     // 递归调用process函数，求解左半部分[L...mid]的最大值
     int leftMax = process(arr, L, mid);  
     // 递归调用process函数，求解右半部分[mid+1...R]的最大值  
