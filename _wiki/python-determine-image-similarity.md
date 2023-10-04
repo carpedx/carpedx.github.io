@@ -3,7 +3,7 @@ layout: wiki
 title: 判断图片相似度
 cate1: python
 cate2:
-description: 判断图片相似度
+description: Python实现判断图片相似度
 keywords: python
 ---
 

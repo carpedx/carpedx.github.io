@@ -3,7 +3,7 @@ layout: wiki
 title: 插入排序
 cate1: algorithm
 cate2: 
-description: 插入排序
+description: 插入排序的工作方式像许多人排序一手扑克牌。开始时，我们的左手为空并且桌子上的牌面向下。然后，我们每次从桌子上拿走一张牌并将它插入左手中正确的位置。为了找到一张牌的正确位置，我们从右到左将它与已在手中的每张牌进行比较，直到前一张牌比它还小时插入
 keywords: algorithm
 ---
 

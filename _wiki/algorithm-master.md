@@ -3,7 +3,7 @@ layout: wiki
 title: Master公式和二分查找算法
 cate1: algorithm
 cate2: 
-description: Master公式和二分查找算法
+description: Master公式是一种用于解决递归问题时间复杂度的公式，它可以帮助我们快速估算递归算法的时间复杂度
 keywords: algorithm
 ---
 

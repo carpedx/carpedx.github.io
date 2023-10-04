@@ -3,7 +3,7 @@ layout: wiki
 title: 日期时间yyyy-MM-dd HH:mm:ss格式转时间戳格式
 cate1: python
 cate2:
-description: 日期时间yyyy-MM-dd HH:mm:ss格式转时间戳格式
+description: Python实现日期时间yyyy-MM-dd HH:mm:ss格式转时间戳格式
 keywords: python
 ---
 

@@ -3,7 +3,7 @@ layout: wiki
 title: 根据像素宽高筛选获取图片
 cate1: python
 cate2:
-description: 根据像素宽高筛选获取图片
+description: Python实现根据像素宽高筛选获取图片
 keywords: python
 ---
 

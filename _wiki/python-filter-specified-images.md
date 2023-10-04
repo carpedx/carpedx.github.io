@@ -3,7 +3,7 @@ layout: wiki
 title: 从文件夹中筛选指定的图片取出
 cate1: python
 cate2:
-description: 从文件夹中筛选指定的图片取出
+description: Python实现从文件夹中筛选指定的图片取出
 keywords: python
 ---
 
