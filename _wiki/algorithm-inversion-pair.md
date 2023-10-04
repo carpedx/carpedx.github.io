@@ -22,3 +22,57 @@
 #### 流程图
 
 <img src="/images/wiki/algorithm/algorithm-inversion-pair_step1.png"  />
+
+
+
+#### java
+
+> 代码改编自：[求小和问题](https://carpedx.com/wiki/algorithm-small-sum/)
+
+```java
+public static void main(String[] args) {
+    int[] arr = {3, 2, 4, 5, 0};
+    System.out.println(inversionPairs(arr));
+}
+
+public static int inversionPairs(int[] arr) {
+    if (arr == null || arr.length < 2) return 0;
+
+    return process(arr, 0, arr.length - 1);
+}
+
+public static int process(int[] arr, int L, int R) {
+    if (L == R) return 0;
+
+    int mid = L + ((R - L) >> 1);
+    int leftSum = process(arr, L, mid);
+    int rightSum = process(arr, mid + 1, R);
+    int mergeSum = merge(arr, L, mid, R);
+    return leftSum + rightSum + mergeSum;
+}
+
+public static int merge(int[] arr, int L, int M, int R) {
+    int[] help = new int[R - L + 1];
+    int i = 0;
+    int p1 = L;
+    int p2 = M + 1;
+    int res = 0;
+    while (p1 <= M && p2 <= R) {
+        // 与求小和问题的区别是此处p1大于p2下标时，数量+1即可
+        res += arr[p1] > arr[p2] ? 1 : 0;
+        // 与求小和问题的区别是将此处改为了倒序
+        help[i++] = arr[p1] > arr[p2] ? arr[p1++] : arr[p2++];
+    }
+    while (p1 <= M) {
+        help[i++] = arr[p1++];
+    }
+    while (p2 <= R) {
+        help[i++] = arr[p2++];
+    }
+    for (i = 0; i < help.length; i++) {
+        arr[L + i] = help[i];
+    }
+    return res;
+}
+```
+
