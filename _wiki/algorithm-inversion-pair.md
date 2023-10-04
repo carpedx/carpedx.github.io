@@ -27,7 +27,7 @@
 
 #### java
 
-> 代码改编自：[求小和问题](https://carpedx.com/wiki/algorithm-small-sum/)
+> 相关代码：[求小和问题](https://carpedx.com/wiki/algorithm-small-sum/)
 
 ```java
 public static void main(String[] args) {

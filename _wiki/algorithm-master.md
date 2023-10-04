@@ -19,31 +19,31 @@ keywords: algorithm
 
 ```java
 public static void main(String[] args) {  
-    // 初始化一个整型数组  
+	// 初始化一个整型数组
     int[] arr = {64, 25, 12, 22, 11};  
-    // 调用getMax函数，打印出数组中的最大值  
+	// 调用getMax函数，打印出数组中的最大值
     System.out.println(getMax(arr));  
 }  
 
-// getMax函数，接收一个整型数组作为参数，返回数组中的最大值  
+// getMax函数，接收一个整型数组作为参数，返回数组中的最大值
 public static int getMax(int[] arr) {  
-    // 调用process函数，传入数组和范围参数，返回最大值  
+	// 调用process函数，传入数组和范围参数，返回最大值
     return process(arr, 0, arr.length - 1);  
 }  
 
-// 接收一个整型数组和两个整数L、R作为参数，返回数组中[L...R]范围内的最大值  
+// 接收一个整型数组和两个整数L、R作为参数，返回数组中[L...R]范围内的最大值
 public static int process(int[] arr, int L, int R) {  
-    // 当范围只有一个元素时，直接返回该元素作为最大值
+	// 当范围只有一个元素时，直接返回该元素作为最大值
     if (L == R) return arr[L];  
 
-    // 计算范围的中间点索引，使用位运算加速计算
-    int mid = L + ((R - L) >> 1);    // 中间点索引
-    // 递归调用process函数，求解左半部分[L...mid]的最大值
+	// 计算范围的中间点索引，使用位运算加速计算
+    int mid = L + ((R - L) >> 1);	// 中间点索引
+	// 递归调用process函数，求解左半部分[L...mid]的最大值
     int leftMax = process(arr, L, mid);  
-    // 递归调用process函数，求解右半部分[mid+1...R]的最大值  
+	// 递归调用process函数，求解右半部分[mid+1...R]的最大值
     int rightMax = process(arr, mid + 1, R); 
     
-    // 得到左右两部分的最大值
+	// 得到左右两部分的最大值
     return Math.max(leftMax, rightMax);  
 }
 ```

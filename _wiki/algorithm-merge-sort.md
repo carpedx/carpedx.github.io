@@ -3,7 +3,7 @@ layout: wiki
 title: 归并排序
 cate1: algorithm
 cate2: 
-description: 归并排序是创建在归并操作上的一种有效的排序算法。算法是采用分治法的一个非常典型的应用，且各层分治递归可以同时进行。归并排序思路简单，速度仅次于快速排序，为稳定排序算法，一般用于对总体无序，但是各子项相对有序的数列
+description: 归并排序是创建在归并操作上的一种有效的排序算法。算法是采用分治法的一个非常典型的应用，且各层分治递归可以同时进行
 keywords: algorithm
 ---
 
@@ -50,6 +50,8 @@ keywords: algorithm
 
 
 #### java
+
+> 相关代码：[二分查找算法](https://carpedx.com/wiki/algorithm-master/)
 
 ```java
 public static void main(String[] args) {
