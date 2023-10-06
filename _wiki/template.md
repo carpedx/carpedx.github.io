@@ -13,7 +13,6 @@ flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-sorting: 
 ---
 
 Content here
