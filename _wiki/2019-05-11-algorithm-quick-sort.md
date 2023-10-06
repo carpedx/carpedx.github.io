@@ -34,7 +34,9 @@ keywords: algorithm
 #### 复杂度
 
 ```tex
-平均时间复杂度：O(N*logN)
+最佳空间复杂度：O(logN)
+最差空间复杂度：O(N)
+
 最佳时间复杂度：O(N*logN)
 最差时间复杂度：O(N^2)
 ```
