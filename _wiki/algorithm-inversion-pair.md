@@ -72,7 +72,7 @@ public static int merge(int[] arr, int L, int M, int R) {
     int p2 = M + 1;
     int res = 0;
     while (p1 <= M && p2 <= R) {
-        // 与求小和问题的区别是此处p1大于p2下标时，数量+1即可
+        // 与求小和问题的区别是此处p1大于p2下标时，逆序对数量+1即可
         res += arr[p1] > arr[p2] ? 1 : 0;
         // 与求小和问题的区别是将此处改为了倒序
         help[i++] = arr[p1] > arr[p2] ? arr[p1++] : arr[p2++];
