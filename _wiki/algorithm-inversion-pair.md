@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: 在一个数组中，左边的数如果比右边的数大，则这两个数构成一个逆序对，请找到逆序对的数量？
 keywords: algorithm
+sorting: 7
 ---
 
 

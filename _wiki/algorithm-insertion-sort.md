@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: 插入排序的工作方式像许多人排序一手扑克牌。开始时，我们的左手为空并且桌子上的牌面向下。然后，我们每次从桌子上拿走一张牌并将它插入左手中正确的位置
 keywords: algorithm
+sorting: 3
 ---
 
 

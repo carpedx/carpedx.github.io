@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: 在一个数组中已知只有一种数出现了奇数次，其他的所有数都出现了偶数次？
 keywords: algorithm
+sorting: 2
 ---
 
 

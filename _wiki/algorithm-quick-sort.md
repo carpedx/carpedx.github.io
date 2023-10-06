@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: 快速排序，又称分区交换排序，简称快排，是一种被广泛运用的排序算法
 keywords: algorithm
+sorting: 9
 ---
 
 

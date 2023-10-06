@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: 归并排序是创建在归并操作上的一种有效的排序算法。算法是采用分治法的一个非常典型的应用，且各层分治递归可以同时进行
 keywords: algorithm
+sorting: 5
 ---
 
 

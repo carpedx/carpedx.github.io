@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: 给定一个数组arr，和一个数num，请把小于num的数放在数组的左边，等于num的数放在数组的中间，大于num的数放在数组的右边
 keywords: algorithm
+sorting: 10
 ---
 
 

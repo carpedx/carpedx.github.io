@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: 重复地走访过要排序的元素列，依次比较两个相邻的元素，如果顺序（如从大到小、首字母从Z到A）错误就把他们交换过来
 keywords: algorithm
+sorting: 8
 ---
 
 

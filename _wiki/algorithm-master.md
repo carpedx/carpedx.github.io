@@ -5,6 +5,7 @@ cate1: algorithm
 cate2: 
 description: Master公式是一种用于解决递归问题时间复杂度的公式，它可以帮助我们快速估算递归算法的时间复杂度
 keywords: algorithm
+sorting: 4
 ---
 
 
