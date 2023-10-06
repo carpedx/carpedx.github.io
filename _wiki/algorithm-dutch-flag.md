@@ -46,16 +46,15 @@ public static void dutchFlag(int[] arr, int num) {
 public static void dutchFlag(int[] arr, int L, int R, int X) {
     if (L >= R) return;
     
-    // 不需要递归排序，因为题目没说左右要有顺序
+    // 不需要递归，因为题目没说左右要有顺序
 	partition(arr, L, R, X);
 }
 
+// 分区函数，将arr分为：【小于区，等于区，大于区】
 public static void partition(int[] arr, int L, int R, int X) {
     int less = L - 1;
     int more = R;
-    // 跟快排的主要区别是：
-    // 	快排最后会将基准值和右区左边界值左交换，那么就可以做到左边区域小于等于基准值，右边区域大于基准值
-    // 	那么数组就会是：【小于区(无序的)，等于区，大于区(无序的)】
+    // 此处跟快排的区别是：快排最后会将基准值和右区左边界值左交换，并返回基准值坐标然后递归
     while (L <= more) {
         if (arr[L] < X) {
             swap(arr, ++less, L++);

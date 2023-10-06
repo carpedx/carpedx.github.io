@@ -25,9 +25,9 @@ keywords: algorithm
 
 快速排序使用分治法策略来把一个序列分为两个子序列
 
-> ① 从数列中挑出一个元素，称为 “基准”（pivot）
-> ② 比基准值小的摆放在基准左边，比基准值大的摆在基准右边
-> ③ 递归把左边和右边的子数排序
+1. 从数列中挑出一个元素，称为 “基准”（pivot）
+2.  比基准值小的摆放在基准左边，比基准值大的摆在基准右边
+3.  递归把左边和右边的子数排序
 
 
 
@@ -43,7 +43,7 @@ keywords: algorithm
 
 #### 动图演示
 
-<img src="/images/wiki/algorithm/algorithm-quick-sort_step2.png"  />
+<img src="/images/wiki/algorithm/algorithm-quick-sort_step2.webp"  />
 
 
 
