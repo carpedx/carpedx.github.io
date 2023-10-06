@@ -30,7 +30,7 @@ permalink: /wiki/
 
 {% when 'cate' %}
 
-{% assign item_grouped = site.wiki | where_exp: 'item', 'item.title != "Wiki Template"' | group_by: 'cate1' | sort: 'name' %}
+{% assign item_grouped = site.wiki | where_exp: 'item', 'item.title != "Wiki Template"' | group_by: 'cate1' | sort: 'sorting' | sort: 'name' %}
 {% for group in item_grouped %}
 ###### {{ group.name }}
 {% assign cate_items = group.items | sort: 'sorting' | sort: 'title' %}
