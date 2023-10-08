@@ -1,9 +1,9 @@
 ---
 layout: post
-title: SQLite JetBrains全家桶的安装与激活
+title: JetBrains全家桶的安装与激活
 categories: JetBrains
 description: JetBrains全家桶的安装与激活
-keywords: JetBrains, PHPStorm
+keywords: JetBrains
 ---
 
 
