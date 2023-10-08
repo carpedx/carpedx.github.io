@@ -37,11 +37,11 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Linux相关
+> 官方网站
 
 <ul>
 {% for link in site.data.links %}
-  {% if link.src == 'linux' %}
+  {% if link.src == 'www' %}
   <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
   {% endif %}
 {% endfor %}
@@ -52,16 +52,6 @@ permalink: /links/
 <ul>
 {% for link in site.data.links %}
   {% if link.src == 'micro' %}
-  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-> Media Format Conversion
-
-<ul>
-{% for link in site.data.links %}
-  {% if link.src == 'media' %}
   <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
   {% endif %}
 {% endfor %}
