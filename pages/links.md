@@ -8,7 +8,7 @@ menu: 链接
 permalink: /links/
 ---
 
-> Docs
+> 开发文档
 
 <ul>
 {% for link in site.data.links %}
@@ -18,7 +18,7 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Learning Website
+> 自我提升
 
 <ul>
 {% for link in site.data.links %}
@@ -28,7 +28,7 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Third Party Tools
+> 辅助工具
 <ul>
 {% for link in site.data.links %}
   {% if link.src == 'tool' %}
@@ -37,7 +37,7 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Linux Related Software
+> Linux相关
 
 <ul>
 {% for link in site.data.links %}
@@ -47,11 +47,11 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Docker Related Software
+> 微服务相关
 
 <ul>
 {% for link in site.data.links %}
-  {% if link.src == 'docker' %}
+  {% if link.src == 'micro' %}
   <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
   {% endif %}
 {% endfor %}
@@ -67,7 +67,7 @@ permalink: /links/
 {% endfor %}
 </ul>
 
-> Scientific Internet Access
+> 科学上网
 
 <ul>
 {% for link in site.data.links %}
