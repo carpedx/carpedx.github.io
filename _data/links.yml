@@ -48,7 +48,7 @@
 
 - name: Portainer
   url: https://www.portainer.io/
-  src: micro
+  src: www
 
 - name: 思维导图
   url: https://www.processon.com/
