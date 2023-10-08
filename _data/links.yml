@@ -66,30 +66,14 @@
   url: https://tool.lu/timestamp/
   src: tool
 
-- name: 文件转换器
-  url: https://convertio.co/zh/video-converter/
-  src: tool
- 
-- name: 文件转换器
-  url: https://onlineconvertfree.com/zh/converter/video/
-  src: tool
-
-- name: 视频转换器
-  url: https://app.xunjieshipin.com/video-converter/
-  src: tool
-
-- name: 即时工具
-  url: https://www.67tool.com/video/convert?to=mp4&type=all
-  src: tool
-
-- name: 科学上网
+- name: 周公子
   url: https://ikuuu.club/
   src: vpn
 
-- name: 科学上网
+- name: 故宫大G
   url: https://web.xjh23.top/#/login/
   src: vpn
 
-- name: 科学上网
+- name: 北极鲇鱼
   url: https://sunwk.fun/
   src: vpn
