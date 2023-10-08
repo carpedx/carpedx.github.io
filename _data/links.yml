@@ -34,7 +34,7 @@
   url: https://www.acwing.com/
   src: study
 
-- name: cnblogs
+- name: 博客园
   url: https://www.cnblogs.com/
   src: study
 
@@ -53,6 +53,14 @@
 - name: portainer
   url: https://www.portainer.io/
   src: docker
+
+- name: json
+  url: https://www.json.cn/
+  src: tool
+
+- name: timestamp
+  url: https://tool.lu/timestamp/
+  src: tool
 
 - name: convertio
   url: https://convertio.co/zh/video-converter/
