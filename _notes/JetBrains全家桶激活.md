@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: note
 title: JetBrains全家桶的安装与激活
 categories: JetBrains
 description: JetBrains全家桶的安装与激活
@@ -25,12 +25,12 @@ keywords: JetBrains
 
 
 3）下载文件ja-netfilter.v3.1.zip
-<img src="/images/posts/jetbrains/jetbrains_active_step1.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step1.jpg" />
 
 
 
 4）下载激活码
-<img src="/images/posts/jetbrains/jetbrains_active_step2.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step2.jpg" />
 
 
 
@@ -52,4 +52,4 @@ keywords: JetBrains
 
 
 8）点击运行软件，输入我们已经下好的激活码。
-<img src="/images/posts/jetbrains/jetbrains_active_step3.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step3.jpg" />
