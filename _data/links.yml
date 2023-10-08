@@ -1,36 +1,32 @@
-- name: php
+- name: PHP
   url: https://www.php.net/manual/zh/index.php
   src: doc
   
-- name: github
+- name: GitHub
   url: https://docs.github.com/zh
   src: doc
 
-- name: composer
+- name: Composer
   url: https://docs.phpcomposer.com/
   src: doc
 
-- name: vitepress
+- name: VitePress
   url: https://vitejs.cn/vitepress/
   src: doc
 
-- name: showdoc
+- name: ShowDoc
   url: https://www.showdoc.com.cn/
   src: doc
 
-- name: processon
-  url: https://www.processon.com/
-  src: study
-
-- name: leetcode
+- name: 力扣网
   url: https://leetcode.cn/
   src: study
 
-- name: nowcoder
+- name: 牛客网
   url: https://www.nowcoder.com/
   src: study
 
-- name: acwing
+- name: AcWing
   url: https://www.acwing.com/
   src: study
 
@@ -38,22 +34,26 @@
   url: https://www.cnblogs.com/
   src: study
 
-- name: centos
+- name: CentOS
   url: https://centos.org/
   src: linux
 
-- name: vmware
+- name: VMware
   url: https://www.vmware.com/
   src: linux
 
-- name: xshell
+- name: XShell
   url: https://www.xshell.com/
   src: linux
 
-- name: portainer
+- name: Portainer
   url: https://www.portainer.io/
   src: docker
 
+- name: 思维导图
+  url: https://www.processon.com/
+  src: tool
+  
 - name: 夸克网盘
   url: https://pan.quark.cn/
   src: tool
@@ -66,30 +66,30 @@
   url: https://tool.lu/timestamp/
   src: tool
 
-- name: convertio
+- name: 文件转换器
   url: https://convertio.co/zh/video-converter/
   src: media
-
-- name: xunjieshipin
-  url: https://app.xunjieshipin.com/video-converter/
-  src: media
  
-- name: onlineconvertfree
+- name: 文件转换器
   url: https://onlineconvertfree.com/zh/converter/video/
   src: media
 
-- name: 67tool
+- name: 视频转换器
+  url: https://app.xunjieshipin.com/video-converter/
+  src: media
+
+- name: 即时工具
   url: https://www.67tool.com/video/convert?to=mp4&type=all
   src: media
 
-- name: ladder
+- name: 科学上网
   url: https://ikuuu.club/
   src: vpn
 
-- name: ladder
+- name: 科学上网
   url: https://web.xjh23.top/#/login/
   src: vpn
 
-- name: ladder
+- name: 科学上网
   url: https://sunwk.fun/
   src: vpn
