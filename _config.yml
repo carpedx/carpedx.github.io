@@ -140,6 +140,9 @@ collections:
     fragments:
         output: true
         permalink: /fragment/:path/
+    notes:
+        output: true
+        permalink: /note/:path/
 
 # ---------------- #
 #      Comments    #
