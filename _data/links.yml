@@ -6,16 +6,16 @@
   url: https://docs.github.com/zh
   src: doc
 
-- name: Composer
-  url: https://docs.phpcomposer.com/
+- name: ShowDoc
+  url: https://www.showdoc.com.cn/
   src: doc
 
 - name: VitePress
   url: https://vitejs.cn/vitepress/
   src: doc
 
-- name: ShowDoc
-  url: https://www.showdoc.com.cn/
+- name: Composer
+  url: https://docs.phpcomposer.com/
   src: doc
 
 - name: 力扣网
@@ -26,24 +26,24 @@
   url: https://www.nowcoder.com/
   src: study
 
-- name: AcWing
-  url: https://www.acwing.com/
-  src: study
-
 - name: 博客园
   url: https://www.cnblogs.com/
   src: study
 
+- name: AcWing
+  url: https://www.acwing.com/
+  src: study
+
+- name: XShell
+  url: https://www.xshell.com/
+  src: www
+  
 - name: CentOS
   url: https://centos.org/
   src: www
 
 - name: VMware
   url: https://www.vmware.com/
-  src: www
-
-- name: XShell
-  url: https://www.xshell.com/
   src: www
 
 - name: Portainer
@@ -58,11 +58,11 @@
   url: https://pan.quark.cn/
   src: tool
 
-- name: JSON在线转换
+- name: JSON转换
   url: https://www.json.cn/
   src: tool
 
-- name: 时间戳在线转换
+- name: 时间戳转换
   url: https://tool.lu/timestamp/
   src: tool
 
