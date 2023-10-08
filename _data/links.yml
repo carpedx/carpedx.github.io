@@ -36,15 +36,15 @@
 
 - name: CentOS
   url: https://centos.org/
-  src: linux
+  src: www
 
 - name: VMware
   url: https://www.vmware.com/
-  src: linux
+  src: www
 
 - name: XShell
   url: https://www.xshell.com/
-  src: linux
+  src: www
 
 - name: Portainer
   url: https://www.portainer.io/
