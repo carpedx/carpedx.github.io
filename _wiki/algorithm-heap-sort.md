@@ -46,9 +46,14 @@ public static void heapSort(int[] arr) {
     if (arr == null || arr.length < 2) return;
 
     // 将当前元素放入大根堆中
+    // 方式一：判断能否往上移动
     for (int i = 0; i < arr.length; i++) {
         heapInsert(arr, i);
     }
+    // 方式二：判断能否往下移动
+	/* for (int i = arr.length - 1; i >= 0; i--) {
+        heapIfy(arr, i);
+    } */
     // 定义堆数组长度
     int heapSize = arr.length;
     // 将堆顶元素（即数组的第一个元素）和最后一个元素交换，同时减小heapSize
@@ -56,7 +61,7 @@ public static void heapSort(int[] arr) {
     // 如果堆数组不止剩最后一个元素
     while (heapSize > 0) {
         // 刚交换到堆顶的元素判断往下移动
-        heapify(arr, 0, heapSize);
+        heapIfy(arr, 0, heapSize);
         // 移动完之后继续将堆顶元素和最后一个元素交换，同时减小heapSize，直到heapSize<=0
         swap(arr, 0, --heapSize);
     }
@@ -77,7 +82,7 @@ public static void heapInsert(int[] arr, int index) {
 }
 
 // 某个数在index位置，能否往下移动
-public static void heapify(int[] arr, int index, int heapSize) {
+public static void heapIfy(int[] arr, int index, int heapSize) {
     // 左子节点的下标
     int left = index * 2 + 1;
     // 下方还有子节点的时候
