@@ -19,7 +19,7 @@ sorting: 12
 
 #### 思路分析
 
-假设K=6，数组为：[10, 2, 3, 5, 1, 15, 4, 20, 7, 30]
+假设 `K=6`，数组为：`[10, 2, 3, 5, 1, 15, 4, 20, 7, 30]`
 
 已知在这个数组中，每个元素移动距离不超过6就能排好顺序，那么数组前6个中的最小值一定是整个数组中的最小值，因为超过的数字移动6次也不会移动到下标0的位置
 
@@ -34,7 +34,7 @@ sorting: 12
 
 #### 流程图
 
-<img src="/images/wiki/algorithm/algorithm-small-sum_step1.png"  />
+<img src="/images/wiki/algorithm/algorithm-sorted-arr-distance-less-k_step1.png"  />
 
 
 
