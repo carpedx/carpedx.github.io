@@ -58,7 +58,7 @@ public static void sortedArrDistanceLessK(int[] arr, int K) {
     PriorityQueue<Integer> heap = new PriorityQueue<>();
     // 将数组的前K个元素添加到堆中
     int index = 0;
-    for (; index < Math.min(arr.length, K); index++) {
+    for (; index <= Math.min(arr.length, K); index++) {
         heap.add(arr[index]);
     }
     // 开始处理数组的后续元素
@@ -74,5 +74,26 @@ public static void sortedArrDistanceLessK(int[] arr, int K) {
         arr[i++] = heap.poll();
     }
 }
+```
+
+
+
+#### 补充
+
+PriorityQueue默认小根堆，要将其转为大根堆只须使用比较器：
+
+```java
+public static class AComp implements Comparator<Integer> {
+    // 如果返回负数，认为第一个参数应该排在前面
+    // 如果返回正数，认为第二个参数应该排在前面
+    // 如果返回0，认为谁放前面都行
+    @Override
+    public int compare(Integer arr0, Integer arr1) {
+        return arr1 - arr0;
+    }
+}
+
+// 变为大根堆
+PriorityQueue<Integer> heap = new PriorityQueue<>(new AComp());
 ```
 
