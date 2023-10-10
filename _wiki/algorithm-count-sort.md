@@ -42,7 +42,7 @@ sorting: 13
 
 
 
-#### 流程图
+#### 代码流程图
 
 <img src="/images/wiki/algorithm/algorithm-count-sort_step4.png" />
 
