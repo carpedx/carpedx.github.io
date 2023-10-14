@@ -18,6 +18,22 @@
   url: https://docs.phpcomposer.com/
   src: doc
 
+- name: Yii
+  url: https://www.yiiframework.com/
+  src: doc
+
+- name: Laravel
+  url: https://docs.golaravel.com/
+  src: doc
+
+- name: Swoole
+  url: https://www.swoole.com/
+  src: doc
+
+- name: Workerman
+  url: https://www.workerman.net/
+  src: doc
+
 - name: 力扣网
   url: https://leetcode.cn/
   src: study

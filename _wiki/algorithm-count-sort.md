@@ -1,18 +1,22 @@
 ---
 layout: wiki
-title: 计数排序
+title: 计数排序和基数排序
 cate1: algorithm
 cate2: 
-description: 计数排序是一种非基于比较的排序算法，于1954年由Harold H. Seward提出。它在处理一定范围内的整数排序时，具有复杂度为Ο(n+k)的优势（其中k是整数的范围），快于任何比较排序算法。但是，这是一种牺牲空间换取时间的做法，而且在O(k)>O(n*log(n))的时候其效率反而不如基于比较的排序。
+description: 计数排序和基数排序是一种非基于比较的排序算法。它在处理一定范围内的整数排序时，快于任何比较排序算法。但是，这是一种牺牲空间换取时间的做法。
 keywords: algorithm
 sorting: 13
 ---
 
 
 
-**计数排序是一种非基于比较的排序算法，于1954年由Harold H. Seward提出。它在处理一定范围内的整数排序时，具有复杂度为Ο(n+k)的优势（其中k是整数的范围），快于任何比较排序算法。但是，这是一种牺牲空间换取时间的做法，而且在O(k)>O(n*log(n))的时候其效率反而不如基于比较的排序。**
+**计数排序和基数排序是一种非基于比较的排序算法。它在处理一定范围内的整数排序时，快于任何比较排序算法。但是，这是一种牺牲空间换取时间的做法。**
 
 ------
+
+
+
+## 计数排序
 
 
 
@@ -88,6 +92,92 @@ public static void countSort(int[] a) {
     for (int i = 0; i < a.length; i++) {
         a[i] = tmp[i];
     }
+}
+```
+
+
+
+## 基数排序
+
+
+
+计数排序和基数排序都可以看作是桶排序。计数排序是特殊的桶排序，当桶的个数取最大 `max-min+1` 的时候，就变成了计数排序。而基数排序则是按数位来划分桶（如：十进制就对应10个桶），每个数位上都进行一轮桶排序，因此可以看做是多轮桶排序。
+
+
+
+#### Java
+
+```java
+public static void main(String[] args) {
+    int[] arr = {10, 2, 3, 5, 1, 15, 4, 20, 7, 30};
+    radixSort(arr);
+    System.out.println(Arrays.toString(arr));
+}
+
+public static void radixSort(int[] arr) {
+    // 检查输入的数组是否为空或者只有一个元素
+    if (arr == null || arr.length < 2) return;
+
+    radixSort(arr, 0, arr.length - 1, maxbits(arr));
+}
+
+// 计算数组中的最大数的
+public static int maxbits(int[] arr) {
+	// 首先将数组中的所有元素进行比较，找出最大值，然后通过不断地将最大值除以10并向下取整，直到最大值不再变化，这样就得到了最大值的位数
+    int max = Integer.MIN_VALUE;
+    for (int i = 0; i < arr.length; i++) {
+        max = Math.max(max, arr[i]);
+    }
+    int res = 0;
+    while (max != 0) {
+        res++;
+        max /= 10;
+    }
+    return res;
+}
+
+// 基数排序的主要部分，用于对数组arr的子数组（由L和R定义）进行排序
+public static void radixSort(int[] arr, int L, int R, int digit) {
+    final int radix = 10;	// 基数（即数字系统的基数量）为10
+    int i = 0, j = 0;
+	// 创建一个用于存放排序结果的桶数组，大小为子数组的长度
+    int[] bucket = new int[R - L + 1];
+    // 对于每个位数（从最低位到最高位）进行排序
+    for (int d = 1; d <= digit; d++) {
+        // 10个空间
+        // count[0] 当前为(d位)是0的数字有多少个
+        // count[1] 当前为(d位)是(0和1)的数字有多少个
+        // count[2] 当前为(d位)是(0、1和2)的数字有多少个
+        // count[i] 当前为(d位)是(0~i)的数字有多少个
+        int[] count = new int[radix];   // 创建一个计数数组，用于记录每个数字在该位上的数量
+        // 遍历子数组
+        for (i = L; i <= R; i++) {
+            // 获取当前元素在第d位上的值
+            j = getDigit(arr[i], d);
+             // 增加对应位置的计数
+            count[j]++;
+        }
+        // 将计数数组进行累加，为桶排序做准备
+        for (i = 1; i < radix; i++) {
+            count[i] = count[i] + count[i - 1];
+        }
+        // 从后往前遍历子数组，将元素放入对应的桶中
+        for (i = R; i >= L; i--) {
+            j = getDigit(arr[i], d);
+            bucket[count[j] - 1] = arr[i];
+            count[j]--;
+        }
+        // 将桶中的元素按顺序放回原数组
+        for (i = L, j = 0; i <= R; i++, j++) {
+            arr[i] = bucket[j];
+        }
+    }
+}
+
+// 用于获取一个整数x的第d位上的数字
+public static int getDigit(int x, int d){
+    // 通过除以10的d-1次方再取余数，获取x的第d位上的数字
+    return ((x / ((int) Math.pow(10, d - 1))) % 10);
 }
 ```
 
