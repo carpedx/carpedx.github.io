@@ -50,9 +50,9 @@
   url: https://www.acwing.com/
   src: study
 
-- name: XShell
-  url: https://www.xshell.com/
-  src: www
+- name: 超级码客
+  url: https://www.chaojimake.cn/question_2_384.html
+  src: study
   
 - name: CentOS
   url: https://centos.org/
