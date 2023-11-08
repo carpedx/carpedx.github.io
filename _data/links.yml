@@ -1,7 +1,11 @@
 - name: PHP
   url: https://www.php.net/manual/zh/index.php
   src: doc
-  
+
+- name: Symfory
+  url: https://symfony.com/
+  src: doc
+
 - name: GitHub
   url: https://docs.github.com/zh
   src: doc
@@ -18,6 +22,10 @@
   url: https://docs.phpcomposer.com/
   src: doc
 
+- name: Packagist
+  url: https://packagist.org/
+  src: doc
+
 - name: Yii
   url: https://www.yiiframework.com/
   src: doc
@@ -26,21 +34,29 @@
   url: https://docs.golaravel.com/
   src: doc
 
-- name: Swoole
-  url: https://www.swoole.com/
-  src: doc
-
-- name: Hyperf
-  url: https://www.hyperf.io/
+- name: ThinkPHP
+  url: https://www.thinkphp.cn/
   src: doc
 
 - name: Swoft
   url: https://www.swoft.org/
   src: doc
 
+- name: Hyperf
+  url: https://www.hyperf.io/
+  src: doc
+
+- name: Swoole
+  url: https://www.swoole.com/
+  src: doc
+
 - name: Workerman
   url: https://www.workerman.net/
   src: doc
+
+- name: 在线PHP
+  url: https://3v4l.org/
+  src: study
 
 - name: 力扣网
   url: https://leetcode.cn/
@@ -73,6 +89,10 @@
 - name: Portainer
   url: https://www.portainer.io/
   src: www
+
+- name: 即时设计
+  url: https://js.design/home
+  src: tool
 
 - name: 思维导图
   url: https://www.processon.com/
