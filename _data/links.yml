@@ -77,7 +77,7 @@
 - name: 超级码客
   url: https://www.chaojimake.cn/question_2_384.html
   src: study
-  
+
 - name: CentOS
   url: https://centos.org/
   src: www
@@ -88,6 +88,10 @@
 
 - name: Portainer
   url: https://www.portainer.io/
+  src: www
+
+- name: GO语言中文网
+  url: https://studygolang.com/
   src: www
 
 - name: 即时设计
