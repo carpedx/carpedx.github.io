@@ -1,8 +1,8 @@
 ---
 layout: fragment
-title: excel截取前后字符串操作
+title: Excel截取前后字符串操作
 tags: [excel]
-description: excel截取前后字符串操作
+description: Excel截取前后字符串操作
 keywords: excel
 ---
 

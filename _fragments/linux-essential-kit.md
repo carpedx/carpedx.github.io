@@ -1,12 +1,18 @@
 ---
 layout: fragment
-title: linux系统必备工具
+title: Linux系统必备工具
 tags: [linux]
-description: linux系统必备工具
+description: Linux系统必备工具
 keywords: linux
 ---
 
 
+
+相关文章：[Linux系统IP和主机名配置](https://carpedx.com/fragment/linux-ip-and-hostname-config/)
+
+
+
+#### 包
 
 下载并安装系统中所有可用的更新，包括安全更新、bug 修复和新功能：
 
@@ -32,13 +38,17 @@ yum install -y net-tools
 
 
 
-vim 编辑器
+#### Vim
+
+安装 vim 编辑器
 
 ```shell
 yum install -y vim
 ```
 
 
+
+#### 防火墙
 
 关闭防火墙，关闭防火墙开机自启
 
@@ -48,6 +58,8 @@ systemctl disable firewalld.service
 ```
 
 
+
+#### 用户
 
 
 创建 test 用户，并修改 test 用户密码
@@ -77,6 +89,8 @@ test ALL=(ALL)       NOPASSWD:ALL
 
 
 
+#### 虚拟机
+
 卸载虚拟机自带的JDK
 
 ```shell
@@ -93,7 +107,7 @@ rpm -qa | grep -i java | xargs -n1 rpm -e --nodeps
 
 
 
-重启虚拟机
+#### 重启
 
 ```shell
 reboot

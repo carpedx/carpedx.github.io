@@ -1,8 +1,8 @@
 ---
 layout: fragment
-title: mysql查询时截取某个字符最后一次出现位置后面的数据
+title: MySQL查询时截取某个字符最后一次出现位置后面的数据
 tags: [mysql]
-description: mysql查询时截取某个字符最后一次出现位置后面的数据
+description: MySQL查询时截取某个字符最后一次出现位置后面的数据
 keywords: mysql
 ---
 
