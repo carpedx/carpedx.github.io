@@ -14,9 +14,9 @@ keywords: linux
 
 编辑 > 虚拟网络编辑器
 
-<img src="/images/fragments/svn/linux-ip-and-hostname-config_step1.jpg" />
+<img src="/images/fragments/linux/linux-ip-and-hostname-config_step1.jpg" />
 
-<img src="/images/fragments/svn/linux-ip-and-hostname-config_step2.jpg" />
+<img src="/images/fragments/linux/linux-ip-and-hostname-config_step2.jpg" />
 
 
 

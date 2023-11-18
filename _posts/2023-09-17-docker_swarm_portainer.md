@@ -30,20 +30,26 @@ yum install https://download.docker.com/linux/fedora/30/x86_64/stable/Packages/c
 
 安装一些其他依赖
 
-```
+```shell
 yum install -y yum-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
 安装 Docker
 
-```
+```shell
 yum install -y docker-ce 
+```
+
+安装 Docker-Compose
+
+```shell
+yum install -y docker-compose
 ```
 
 启动并设置开机自启
 
-```
+```shell
 systemctl enable docker
 systemctl start docker
 ```
