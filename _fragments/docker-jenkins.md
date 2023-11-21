@@ -297,12 +297,12 @@ version: '3.1'
 services:
   mytest:
     build:
-    	context: ./
-    	dockerfile: Dockerfile
-    image: mytest:v1.0.0
+      context: ./
+      dockerfile: Dockerfile
+    image: mytest:v2.0.0
     container_name: mytest
     ports:
-    	- 8081:8080
+      - 8081:8080
 ```
 
 

@@ -87,12 +87,16 @@ docker-compose up -d
 docker logs -f gitlab
 ```
 
+修改中文显示：
+
+<img src="/images/fragments/docker/docker-sonarqube_step3.webp" />
+
 
 
 
 > **报错显示内存不足：**
 >
-> <img src="/images/fragments/docker/docker-sonarqube_step1.webp" />
+> <img src="/images/fragments/docker/docker-sonarqube_step2.webp" />
 >
 > 增加虚拟内存：
 >
@@ -103,6 +107,8 @@ docker logs -f gitlab
 > ```shell
 > vm.max_map_count=262144
 > ```
+>
+> <img src="/images/fragments/docker/docker-sonarqube_step1.webp" />
 >
 > 修改生效：
 >
