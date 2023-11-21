@@ -2,9 +2,16 @@
 layout: fragment
 title: Docker安装Jenkins
 tags: [docker]
-description: Docker安装Jenkins
+description: 持续集成工具
 keywords: docker
 ---
+
+
+
+相关文章：[Docker安装GitLab](https://carpedx.com/fragment/docker-gitlab/)
+
+------
+
 
 
 #### 安装 JDK
@@ -97,6 +104,7 @@ services:
   gitlab:
     image: 'jenkins/jenkins'
     container_name: jenkins
+    restart: always
     ports:
       - '8080:8080'
       - '50000:50000'
@@ -140,7 +148,7 @@ docker logs -f jenkins
 得到密码
 
 ```shell
-docker-compose logs -f jenkins
+docker logs -f jenkins
 ```
 
 <img src="/images/fragments/docker/docker-jenkins_step2.webp" />
@@ -177,7 +185,7 @@ http://192.168.31.102:8080/
 
 #### 安装 Jenkins 插件
 
-Git Parameter、Publish Over SSH
+安装Git Parameter和Publish Over SSH插件
 
 <img src="/images/fragments/docker/docker-jenkins_step3.webp" />
 
@@ -234,7 +242,7 @@ Jenkins指定Publish over SSH
 
 #### 测试Jenkins
 
-在GitLab上创建测试项目mytest
+**在GitLab上创建测试项目mytest**
 
 > 相关参考：[Docker安装GitLab](https://carpedx.com/fragment/docker-gitlab/)
 
@@ -242,25 +250,101 @@ Jenkins指定Publish over SSH
 
 
 
-Jenkins上创建测试任务
+**Jenkins上创建测试任务**
 
-配置Git拉取代码
-
+1）配置Git拉取代码
 <img src="/images/fragments/docker/docker-jenkins_step8.webp" />
-
 <img src="/images/fragments/docker/docker-jenkins_step9.webp" />
+> 拉取成功会在容器内workspace下创建mytest目录：
+> docker exec -it jenkins bash
+> cd /var/jenkins_home/workspace
 
-配置Maven构建jar包
-
+2）配置Maven构建jar包
 <img src="/images/fragments/docker/docker-jenkins_step11.webp" />
-
 <img src="/images/fragments/docker/docker-jenkins_step12.webp" />
 
-> mvn clean package -DskipTests	清除之前的构建文件，然后编译、测试和打包项目，但在这个过程中跳过运行测试
+> `mvn clean package -DskipTests` 清除之前的构建文件，然后编译、测试和打包项目，但在这个过程中跳过运行测试
 
-配置SSH，将构建后的jar包放到目标服务器
-
+3）配置SSH，将构建后的jar包放到目标服务器
 <img src="/images/fragments/docker/docker-jenkins_step13.webp" />
-
 <img src="/images/fragments/docker/docker-jenkins_step14.webp" />
+
+> 构建成功会在容器内/var/jenkins_home/workspace/mytest目录下target中存在jar包
+
+
+
+#### mytest项目构建自定义镜像
+
+`docker/pom.xml` `<build>` 标签中增加，固定Jar包名称
+
+```xml
+<finalName>mytest</finalName>
+```
+
+docker/Dockerfile：
+
+```dockerfile
+FROM daocloud.io/library/java:8u40-jdk
+COPY mytest.jar /usr/local/
+WORKDIR /usr/local
+CMD java -jar mytest.jar
+```
+
+docker/docker-compose.yml：
+
+```yaml
+version: '3.1'
+services:
+  mytest:
+    build:
+    	context: ./
+    	dockerfile: Dockerfile
+    image: mytest:v1.0.0
+    container_name: mytest
+    ports:
+    	- 8081:8080
+```
+
+
+
+#### 测试构建成功
+
+构建成功进入192.168.31.102查看Docker中是否以及存在mytest
+
+```shell
+docker ps
+```
+
+测试访问：
+
+http://192.168.31.102:8081/test
+
+
+
+#### 配置 Jenkins 根据 tag 构建
+
+<img src="/images/fragments/docker/docker-jenkins_step15.webp" />
+
+<img src="/images/fragments/docker/docker-jenkins_step16.webp" />
+
+<img src="/images/fragments/docker/docker-jenkins_step17.webp" />
+
+<img src="/images/fragments/docker/docker-jenkins_step18.webp" />
+
+配置好后构建如图：
+
+<img src="/images/fragments/docker/docker-jenkins_step19.webp" />
+
+
+
+测试：
+
+1. 在GitLab中创建标签 v1.0.0
+2. 修改 mytest 项目`docker-compose.yml`对应的`image`版本号为 v2.0.0
+3. 提交推送GItLab
+4. 在GitLab中创建标签 v2.0.0
+5. 在Jenkins中选择 v2.0.0 执行 Build
+6. 测试访问 http://192.168.31.102:8081/test
+
+
 

@@ -2,7 +2,7 @@
 layout: fragment
 title: Docker安装GitLab
 tags: [docker]
-description: Docker安装GitLab
+description: 代码仓库管理系统
 keywords: docker
 ---
 
