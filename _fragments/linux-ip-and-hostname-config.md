@@ -8,6 +8,12 @@ keywords: linux
 
 
 
+相关文章：[Linux系统必备工具](https://carpedx.com/fragment/linux-essential-kit/)
+
+------
+
+
+
 #### 配置IP
 
 **VMware配置**

@@ -8,6 +8,12 @@ keywords: excel
 
 
 
+相关文章：[Excel查找两列重复项](https://carpedx.com/fragment/excel-seek-repeat/)
+
+------
+
+
+
 #### 截取指定字符串 `前面` 的字符
 
 如：

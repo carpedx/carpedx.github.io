@@ -10,6 +10,8 @@ keywords: excel
 
 **Excel在同一列有相同数据的情况下，查找两列相同的数据，但不包含同一列的重复**
 
+相关文章：[Excel截取前后字符串操作](https://carpedx.com/fragment/excel-string-before-and-after-truncation/)
+
 ------
 
 公式：
