@@ -12,56 +12,51 @@ sorting: 1
 
 **简单工厂，也称静态工厂，不属于GoF23种设计模式。但是可以说是所有的设计模式中最容易理解的。**
 
+> 相关链接：[工厂方法模式](https://carpedx.com/wiki/design-pattern-factory/)、[抽象工厂模式](https://carpedx.com/wiki/design-pattern-abstract-factory/)、[策略模式](https://carpedx.com/wiki/design-pattern-strategy/)
+
 ------
 
-PHP实现：
+
+
+PHP：
 
 ```php
 <?php
 
-// Products
-interface Product
-{
-    public function show();
+// 发送短信接口
+interface Message {
+    public function send(string $msg);
 }
 
-class ProductA implements Product
-{
-    public function show()
-    {
-        echo 'Show ProductA';
+// 阿里云发送短信
+class AliYunMessage implements Message{
+    public function send(string $msg){
+        return '阿里云短信（原阿里大鱼）发送成功！短信内容：' . $msg;
     }
 }
 
-class ProductB implements Product
-{
-    public function show()
-    {
-        echo 'Show ProductB';
+// 百度云发送短信
+class BaiduYunMessage implements Message{
+    public function send(string $msg){
+        return '百度SMS短信发送成功！短信内容：' . $msg;
     }
 }
 
-// Factory
-class Factory
-{
-    public static function createProduct(string $type) : Product
-    {
-        $product = null;
-        switch ($type) {
-            case 'A':
-                $product = new ProductA();
-                break;
-            case 'B':
-                $product = new ProductB();
-                break;
+// 工厂类
+Class MessageFactory {
+    public static function createMessage($type){
+        switch($type){
+            case 'Ali':
+                return new AliYunMessage();
+            case 'BD':
+                return new BaiduYunMessage();
+            default:
+                return null;
         }
-        return $product;
     }
 }
 
-$productA = Factory::createProduct('A');
-$productB = Factory::createProduct('B');
-$productA->show();
-$productB->show();
+$message = MessageFactory::createMessage('Ali');
+echo $message->send('您有新的短消息，请查收');
 ```
 

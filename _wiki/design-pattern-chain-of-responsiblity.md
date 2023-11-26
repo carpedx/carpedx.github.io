@@ -8,6 +8,8 @@ keywords: design-pattern
 sorting: 11
 ---
 
+
+
 **责任链模式**
 
 ------
