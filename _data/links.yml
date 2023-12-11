@@ -1,3 +1,7 @@
+- name: Solidity
+  url: https://solidity-by-example.org/
+  src: doc
+
 - name: PHP
   url: https://www.php.net/manual/zh/index.php
   src: doc
@@ -53,6 +57,10 @@
 - name: Workerman
   url: https://www.workerman.net/
   src: doc
+
+- name: 在线Solidity
+  url: https://remix.ethereum.org/
+  src: study
 
 - name: 在线PHP
   url: https://3v4l.org/

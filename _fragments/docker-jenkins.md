@@ -348,3 +348,38 @@ http://192.168.31.102:8081/test
 
 
 
+-------
+
+
+
+#### Jenkins密码忘记后的解决方法
+
+1. 首先我们找到 Jenkins 专用的用户数据存放路径
+
+```shell
+find / -name config.xml
+```
+
+<img src="/images/fragments/docker/docker-jenkins_step20.webp" />
+
+2. 编辑此路径下的文件
+
+```shell
+vim /var/lib/jenkins/users/admin_3428504826518777999/config.xml
+```
+
+<img src="/images/fragments/docker/docker-jenkins_step21.webp" />
+
+3. 将密码换成6个1 `111111`
+
+```txt
+#jbcrypt:$2a$10$DdaWzN64JgUtLdvxWIflcuQu2fgrrMSAMabF5TSrGK5nXitqK9ZMS
+```
+
+​	4. 重启服务
+
+```shell
+docker restart jenkins/jenkins
+```
+
+​	5. 重新登录

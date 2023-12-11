@@ -96,7 +96,7 @@ systemctl restart docker
 3）设置 Docker Harbor 账号密码
 
 ```shell
-docker logs -u admin -p Harbor12345 192.168.31.102:80
+docker login -u admin -p Harbor12345 192.168.31.102:80
 ```
 
 
@@ -310,3 +310,4 @@ mv deploy.sh /usr/bin/
 6）执行构建，构建成功访问 http://192.168.31.102:8081/test
 
 <img src="/images/fragments/docker/docker-harbor_step15.webp" />
+
