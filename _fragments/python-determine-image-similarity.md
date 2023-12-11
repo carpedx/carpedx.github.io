@@ -1,8 +1,7 @@
 ---
-layout: wiki
-title: 判断图片相似度
-cate1: python
-cate2:
+layout: fragment
+title: Python实现判断图片相似度
+tags: [python]
 description: Python实现判断图片相似度
 keywords: python
 ---

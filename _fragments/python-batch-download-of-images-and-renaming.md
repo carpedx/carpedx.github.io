@@ -1,8 +1,7 @@
 ---
-layout: wiki
-title: 批量下载指定链接图片后改名
-cate1: python
-cate2:
+layout: fragment
+title: Python实现批量下载指定链接图片后改名
+tags: [python]
 description: Python实现批量下载指定链接图片后改名
 keywords: python
 ---

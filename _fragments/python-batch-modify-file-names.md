@@ -1,8 +1,7 @@
 ---
-layout: wiki
-title: 批量修改对应的文件名
-cate1: python
-cate2:
+layout: fragment
+title: Python实现批量修改对应的文件名
+tags: [python]
 description: Python实现批量修改对应的文件名
 keywords: python
 ---

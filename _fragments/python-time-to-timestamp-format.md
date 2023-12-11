@@ -1,8 +1,7 @@
 ---
-layout: wiki
-title: 日期时间yyyy-MM-dd HH:mm:ss格式转时间戳格式
-cate1: python
-cate2:
+layout: fragment
+title: Python实现日期时间yyyy-MM-dd HH:mm:ss格式转时间戳格式
+tags: [python]
 description: Python实现日期时间yyyy-MM-dd HH:mm:ss格式转时间戳格式
 keywords: python
 ---

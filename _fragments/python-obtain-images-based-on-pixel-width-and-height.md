@@ -1,8 +1,7 @@
 ---
-layout: wiki
-title: 根据像素宽高筛选获取图片
-cate1: python
-cate2:
+layout: fragment
+title: Python实现根据像素宽高筛选获取图片
+tags: [python]
 description: Python实现根据像素宽高筛选获取图片
 keywords: python
 ---
