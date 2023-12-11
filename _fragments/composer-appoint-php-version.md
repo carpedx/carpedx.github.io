@@ -1,6 +1,6 @@
 ---
 layout: fragment
-title: 指定Composer使用的PHP版本
+title: Composer指定使用的PHP版本
 tags: [composer, php]
 description: 指定Composer使用的PHP版本
 keywords: composer, php
