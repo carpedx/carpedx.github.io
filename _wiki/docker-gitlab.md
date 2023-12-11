@@ -1,10 +1,18 @@
 ---
-layout: fragment
+layout: wiki
 title: Docker安装GitLab
-tags: [docker]
-description: 代码仓库管理系统
-keywords: docker
+cate1: devops
+cate2: 
+description: Docker安装代码仓库GitLab
+keywords: devops
+sorting: 1
 ---
+
+
+
+**GitLab 代码仓库**
+
+------
 
 
 
@@ -78,5 +86,5 @@ docker exec -it gitlab base
 cat /etc/gitlab/initial_root_password
 ```
 
-<img src="/images/fragments/docker/docker-gitlab_step1.webp" />
+<img src="/images/wiki/docker/docker-gitlab_step1.webp" />
 

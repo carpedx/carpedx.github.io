@@ -1,14 +1,18 @@
 ---
-layout: fragment
+layout: wiki
 title: Docker安装Jenkins
-tags: [docker]
-description: 持续集成工具
-keywords: docker
+cate1: devops
+cate2: 
+description: Docker安装持续集成工具Jenkins
+keywords: devops
+sorting: 3
 ---
 
 
 
-相关文章：[Docker安装GitLab](https://carpedx.com/fragment/docker-gitlab/)
+**Jenkins 持续集成工具**
+
+> 相关文章：[Docker安装GitLab](https://carpedx.com/wiki/docker-gitlab/)
 
 ------
 
@@ -128,7 +132,7 @@ docker logs -f jenkins
 
 > **报错显示权限不足：**
 >
-> <img src="/images/fragments/docker/docker-jenkins_step1.webp" />
+> <img src="/images/wiki/docker/docker-jenkins_step1.webp" />
 >
 > 加上权限
 >
@@ -151,7 +155,7 @@ docker logs -f jenkins
 docker logs -f jenkins
 ```
 
-<img src="/images/fragments/docker/docker-jenkins_step2.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step2.webp" />
 
 
 
@@ -187,7 +191,7 @@ http://192.168.31.102:8080/
 
 安装Git Parameter和Publish Over SSH插件
 
-<img src="/images/fragments/docker/docker-jenkins_step3.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step3.webp" />
 
 
 
@@ -222,9 +226,9 @@ Jenkins指定JDK、Maven
 
 > 用于让Jenkins拉取和构建代码
 
-<img src="/images/fragments/docker/docker-jenkins_step4.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step4.webp" />
 
-<img src="/images/fragments/docker/docker-jenkins_step5.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step5.webp" />
 
 
 
@@ -234,9 +238,9 @@ Jenkins指定Publish over SSH
 >
 > 提前在192.168.31.102服务器下创建好目录：/usr/local/test
 
-<img src="/images/fragments/docker/docker-jenkins_step6.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step6.webp" />
 
-<img src="/images/fragments/docker/docker-jenkins_step7.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step7.webp" />
 
 
 
@@ -244,30 +248,30 @@ Jenkins指定Publish over SSH
 
 **在GitLab上创建测试项目mytest**
 
-> 相关参考：[Docker安装GitLab](https://carpedx.com/fragment/docker-gitlab/)
+> 相关参考：[Docker安装GitLab](https://carpedx.com/wiki/docker-gitlab/)
 
-<img src="/images/fragments/docker/docker-jenkins_step10.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step10.webp" />
 
 
 
 **Jenkins上创建测试任务**
 
 1）配置Git拉取代码
-<img src="/images/fragments/docker/docker-jenkins_step8.webp" />
-<img src="/images/fragments/docker/docker-jenkins_step9.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step8.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step9.webp" />
 > 拉取成功会在容器内workspace下创建mytest目录：
 > docker exec -it jenkins bash
 > cd /var/jenkins_home/workspace
 
 2）配置Maven构建jar包
-<img src="/images/fragments/docker/docker-jenkins_step11.webp" />
-<img src="/images/fragments/docker/docker-jenkins_step12.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step11.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step12.webp" />
 
 > `mvn clean package -DskipTests` 清除之前的构建文件，然后编译、测试和打包项目，但在这个过程中跳过运行测试
 
 3）配置SSH，将构建后的jar包放到目标服务器
-<img src="/images/fragments/docker/docker-jenkins_step13.webp" />
-<img src="/images/fragments/docker/docker-jenkins_step14.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step13.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step14.webp" />
 
 > 构建成功会在容器内/var/jenkins_home/workspace/mytest目录下target中存在jar包
 
@@ -323,17 +327,17 @@ http://192.168.31.102:8081/test
 
 #### 配置 Jenkins 根据 tag 构建
 
-<img src="/images/fragments/docker/docker-jenkins_step15.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step15.webp" />
 
-<img src="/images/fragments/docker/docker-jenkins_step16.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step16.webp" />
 
-<img src="/images/fragments/docker/docker-jenkins_step17.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step17.webp" />
 
-<img src="/images/fragments/docker/docker-jenkins_step18.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step18.webp" />
 
 配置好后构建如图：
 
-<img src="/images/fragments/docker/docker-jenkins_step19.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step19.webp" />
 
 
 
@@ -360,7 +364,7 @@ http://192.168.31.102:8081/test
 find / -name config.xml
 ```
 
-<img src="/images/fragments/docker/docker-jenkins_step20.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step20.webp" />
 
 2. 编辑此路径下的文件
 
@@ -368,7 +372,7 @@ find / -name config.xml
 vim /var/lib/jenkins/users/admin_3428504826518777999/config.xml
 ```
 
-<img src="/images/fragments/docker/docker-jenkins_step21.webp" />
+<img src="/images/wiki/docker/docker-jenkins_step21.webp" />
 
 3. 将密码换成6个1 `111111`
 

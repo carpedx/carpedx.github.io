@@ -1,14 +1,16 @@
 ---
-layout: fragment
+layout: wiki
 title: Docker下配置Jenkins流水线任务
-tags: [docker]
+cate1: devops
+cate2: 
 description: Docker下配置Jenkins流水线任务
-keywords: docker
+keywords: devops
+sorting: 5
 ---
 
 
 
-相关文章：[Docker安装GitLab](https://carpedx.com/fragment/docker-gitlab/)、[Docker安装Jenkins](https://carpedx.com/fragment/docker-jenkins/)、[Docker安装SonarQube](https://carpedx.com/fragment/docker-sonarqube/)、[Docker安装Harbor](https://carpedx.com/fragment/docker-harbor/)
+> 相关文章：[Docker安装GitLab](https://carpedx.com/wiki/docker-gitlab/)、[Docker安装Jenkins](https://carpedx.com/wiki/docker-jenkins/)、[Docker安装SonarQube](https://carpedx.com/wiki/docker-sonarqube/)、[Docker安装Harbor](https://carpedx.com/wiki/docker-harbor/)
 
 ------
 
@@ -18,7 +20,7 @@ keywords: docker
 
 项目中增加 `Jenkinsfile` 文件，提交到 GitLab
 
-<img src="/images/fragments/docker/docker-jenkins-pipeline_step1.webp" />
+<img src="/images/wiki/docker/docker-jenkins-pipeline_step1.webp" />
 
 `Jenkinsfile`
 
@@ -81,7 +83,7 @@ pipeline {
 
 > 在 Jenkins 的 流水线语法 中可以生成这些代码：
 >
-> <img src="/images/fragments/docker/docker-jenkins-pipeline_step6.webp" />
+> <img src="/images/wiki/docker/docker-jenkins-pipeline_step6.webp" />
 
 
 
@@ -89,25 +91,25 @@ pipeline {
 
 Jenkins 新建流水线任务，配置 GitLab、参数
 
-<img src="/images/fragments/docker/docker-jenkins-pipeline_step2.webp" />
+<img src="/images/wiki/docker/docker-jenkins-pipeline_step2.webp" />
 
 配置 GitLab 地址：
 
-<img src="/images/fragments/docker/docker-jenkins-pipeline_step3.webp" />
+<img src="/images/wiki/docker/docker-jenkins-pipeline_step3.webp" />
 
 配置参数：
 
-<img src="/images/fragments/docker/docker-jenkins-pipeline_step4.webp" />
+<img src="/images/wiki/docker/docker-jenkins-pipeline_step4.webp" />
 
-<img src="/images/fragments/docker/docker-jenkins-pipeline_step5.webp" />
+<img src="/images/wiki/docker/docker-jenkins-pipeline_step5.webp" />
 
 
 
 #### 测试构建
 
-<img src="/images/fragments/docker/docker-jenkins-pipeline_step7.webp" />
+<img src="/images/wiki/docker/docker-jenkins-pipeline_step7.webp" />
 
-<img src="/images/fragments/docker/docker-jenkins-pipeline_step8.webp" />
+<img src="/images/wiki/docker/docker-jenkins-pipeline_step8.webp" />
 
 
 
@@ -116,14 +118,14 @@ Jenkins 新建流水线任务，配置 GitLab、参数
 > Error response from daemon: login attempt to url failed with status: 502 Bad Gateway
 >
 > 检查 harbor 服务，是否又服务未启动，重启即可：
-> <img src="/images/fragments/docker/docker-jenkins-pipeline_step9.webp" />
-> <img src="/images/fragments/docker/docker-jenkins-pipeline_step10.webp" />
+> <img src="/images/wiki/docker/docker-jenkins-pipeline_step9.webp" />
+> <img src="/images/wiki/docker/docker-jenkins-pipeline_step10.webp" />
 
 
 
 > permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "url": dial unix /var/run/docker.sock: connect: permission denied
 >
-> 权限不足，修改 docker.sock 的权限，更详细可参考 [Docker安装Harbor](https://carpedx.com/fragment/docker-harbor/)：
+> 权限不足，修改 docker.sock 的权限，更详细可参考 [Docker安装Harbor](https://carpedx.com/wiki/docker-harbor/)：
 > `cd /var/run`
 > `chown root:root docker.sock`
 > `chmod o+rw docker.sock`

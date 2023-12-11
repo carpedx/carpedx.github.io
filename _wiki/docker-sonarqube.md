@@ -1,14 +1,18 @@
 ---
-layout: fragment
+layout: wiki
 title: Docker安装SonarQube
-tags: [docker]
-description: 代码质量检查工具
-keywords: docker
+cate1: devops
+cate2: 
+description: Docker安装代码质量检查工具SonarQube
+keywords: devops
+sorting: 2
 ---
 
 
 
-相关文章：[Docker安装GitLab](https://carpedx.com/fragment/docker-gitlab/)、[Docker安装Jenkins](https://carpedx.com/fragment/docker-jenkins/)
+**SonarQube 代码质量检查工具**
+
+> 相关文章：[Docker安装GitLab](https://carpedx.com/wiki/docker-gitlab/)、[Docker安装Jenkins](https://carpedx.com/wiki/docker-jenkins/)
 
 ------
 
@@ -91,14 +95,14 @@ docker logs -f gitlab
 
 下载中文插件：
 
-<img src="/images/fragments/docker/docker-sonarqube_step3.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step3.webp" />
 
 
 
 
 > **报错显示内存不足：**
 >
-> <img src="/images/fragments/docker/docker-sonarqube_step2.webp" />
+> <img src="/images/wiki/docker/docker-sonarqube_step2.webp" />
 >
 > 增加虚拟内存：
 >
@@ -110,7 +114,7 @@ docker logs -f gitlab
 > vm.max_map_count=262144
 > ```
 >
-> <img src="/images/fragments/docker/docker-sonarqube_step1.webp" />
+> <img src="/images/wiki/docker/docker-sonarqube_step1.webp" />
 >
 > 修改生效：
 >
@@ -166,7 +170,7 @@ http://192.168.31.102:9000/	默认账号admin，密码admin
   </activeProfiles>
 ```
 
-<img src="/images/fragments/docker/docker-sonarqube_step4.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step4.webp" />
 
 2）mytest项目下的控制台执行代码质量检测：
 
@@ -178,7 +182,7 @@ mvn sonar:sonar
 
 3）执行成功后访问 http://192.168.31.102:9000/ 会显示检测结果
 
-<img src="/images/fragments/docker/docker-sonarqube_step5.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step5.webp" />
 
 
 
@@ -214,11 +218,11 @@ mv /root/sonar-scanner/ /usr/local/docker/jenkins_docker/data/
 vim /usr/local/docker/jenkins_docker/data/sonar-scanner/conf/sonar-scanner.properties
 ```
 
-<img src="/images/fragments/docker/docker-sonarqube_step6.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step6.webp" />
 
 在 Sonarqube（http://192.168.31.102:9000/） 上生成 token
 
-<img src="/images/fragments/docker/docker-sonarqube_step7.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step7.webp" />
 
 进入 Jenkins 下 mytest 目录测试 sonar-scanner
 
@@ -232,7 +236,7 @@ cd /usr/local/docker/jenkins_docker/data/workspace/mytest
 
 执行成功后访问 http://192.168.31.102:9000/ 会显示检测结果
 
-<img src="/images/fragments/docker/docker-sonarqube_step8.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step8.webp" />
 
 
 
@@ -240,29 +244,29 @@ cd /usr/local/docker/jenkins_docker/data/workspace/mytest
 
 Jenkins 下载 SonarQube Scanner 插件：
 
-<img src="/images/fragments/docker/docker-sonarqube_step9.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step9.webp" />
 
 Jenkins 系统管理 - 系统配置 SonarQube servers：
 
 > 添加按钮点击没反应可以尝试写完Name、URL之后 应用 保存 重新进入该页面。如果还不行可以尝试重启 Jenkins：http://192.168.31.102:8080/restart
 
-<img src="/images/fragments/docker/docker-sonarqube_step10.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step10.webp" />
 
-<img src="/images/fragments/docker/docker-sonarqube_step11.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step11.webp" />
 
-<img src="/images/fragments/docker/docker-sonarqube_step12.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step12.webp" />
 
-<img src="/images/fragments/docker/docker-sonarqube_step13.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step13.webp" />
 
 Jenkins 系统管理 - 全局配置 SonarQube Scanner：
 
-<img src="/images/fragments/docker/docker-sonarqube_step14.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step14.webp" />
 
 Jenkins 项目下增加构建步骤：
 
-<img src="/images/fragments/docker/docker-sonarqube_step15.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step15.webp" />
 
-<img src="/images/fragments/docker/docker-sonarqube_step16.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step16.webp" />
 
 ```shell
 sonar.projectname=${JOB_NAME}
@@ -279,4 +283,4 @@ rm -rf /usr/local/docker/jenkins_docker/data/workspace/mytest/.scannerwork/
 
 在 Jenkins 中再次构建，查看日志是否有 sonarqube：
 
-<img src="/images/fragments/docker/docker-sonarqube_step17.webp" />
+<img src="/images/wiki/docker/docker-sonarqube_step17.webp" />
