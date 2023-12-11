@@ -1,14 +1,14 @@
 ---
 layout: fragment
-title: 解决yarn网络连接异常报错问题
+title: yarn网络连接异常报错包下载失败问题
 tags: [yarn]
-description: 解决yarn网络连接异常报错问题
+description: yarn网络连接异常报错包下载失败问题
 keywords: yarn
 ---
 
 
 
-**解决 `yarn` 网络连接异常，一直重试报错 `tunneling socket could not be established...` 导致包一直下载不下来 **
+**解决 yarn 网络连接异常，一直重试报错 `tunneling socket could not be established...` 导致包一直下载不下来**
 
 > 该异常就算关闭了代理也没用，还是会报错
 

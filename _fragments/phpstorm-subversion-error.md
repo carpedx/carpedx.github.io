@@ -1,14 +1,14 @@
 ---
 layout: fragment
-title: 解决“无法使用Subversion命令行运行客户端”
+title: PhpStorm报错“无法使用Subversion命令行运行客户端”
 tags: [php]
-description: 解决“无法使用Subversion命令行运行客户端”
+description: PhpStorm报错“无法使用Subversion命令行运行客户端”
 keywords: php
 ---
 
 
 
-**解决“无法使用Subversion命令行运行客户端” **
+**解决 PhpStorm 报错“无法使用 Subversion 命令行运行客户端”**
 
 ------
 
