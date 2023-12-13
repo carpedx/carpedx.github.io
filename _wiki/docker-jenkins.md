@@ -5,7 +5,7 @@ cate1: devops
 cate2: 
 description: Docker安装持续集成工具Jenkins
 keywords: devops
-sorting: 3
+sorting: 2
 ---
 
 

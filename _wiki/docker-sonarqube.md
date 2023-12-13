@@ -5,7 +5,7 @@ cate1: devops
 cate2: 
 description: Docker安装代码质量检查工具SonarQube
 keywords: devops
-sorting: 2
+sorting: 3
 ---
 
 
