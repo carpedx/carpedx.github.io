@@ -1,0 +1,163 @@
+---
+layout: fragment
+title: Linux Ubuntu系统PHP切换版本
+tags: [linux]
+description: Linux Ubuntu系统PHP切换版本
+keywords: linux
+---
+
+
+
+
+
+1）命令如下：
+
+```shell
+sudo update-alternatives --config php
+```
+
+```tex
+There are 2 choices for the alternative php (providing /usr/bin/php).
+
+  Selection    Path             Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/php8.0   80        auto mode
+* 1            /usr/bin/php7.4   74        manual mode
+  2            /usr/bin/php8.0   80        manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 
+```
+
+
+
+2）选择相应的数字编码，输入即可：
+
+​	默认 PHP 7.4 ，需要切换到 PHP 8.0
+
+```shell
+$ sudo a2dismod php7.4 
+$ sudo a2enmod  php8.0
+$ sudo service  apache2 restart
+```
+
+​	默认 PHP 8.0 ，需要切换到 PHP 7.4
+
+```shell
+$ sudo a2dismod php8.0 
+$ sudo a2enmod  php7.4
+$ sudo service  apache2 restart
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### 包
+
+下载并安装系统中所有可用的更新，包括安全更新、bug 修复和新功能：
+
+```shell
+yum -y update
+```
+
+
+
+安装 epel-release 包管理器
+
+```shell
+yum install -y epel-release
+```
+
+
+
+工具包合集，包含 ifconfig 等命令
+
+```shell
+yum install -y net-tools
+```
+
+
+
+#### Vim
+
+安装 vim 编辑器
+
+```shell
+yum install -y vim
+```
+
+
+
+#### 防火墙
+
+关闭防火墙，关闭防火墙开机自启
+
+```shell
+systemctl stop firewalld
+systemctl disable firewalld.service
+```
+
+
+
+#### 用户
+
+
+创建 test 用户，并修改 test 用户密码
+
+```shell
+useradd test
+passwd 123456
+```
+
+
+
+
+配置 test 用户具有 root 权限，方便后期加 sudo 执行 root 权限的命令
+
+```shell
+vim /etc/sudoers
+```
+
+在%wheel这行下面添加一行：
+
+```shell
+## Allows people in group wheel to run all commands
+%wheel  ALL=(ALL)       ALL
+
+test ALL=(ALL)       NOPASSWD:ALL
+```
+
+
+
+#### 虚拟机
+
+卸载虚拟机自带的JDK
+
+```shell
+rpm -qa | grep -i java | xargs -n1 rpm -e --nodeps
+```
+
+> rpm -qa：查询所安装的所有rpm软件包
+>
+> grep -i：忽略大小写
+>
+> xargs -n1：表示每次只传递一个参数
+>
+> rpm -e --nodeps：强制卸载软件
+
+
+
+#### 重启
+
+```shell
+reboot
+```
+
