@@ -45,7 +45,13 @@ keywords: php
 
 <img src="/images/fragments/php/wsl2-xdebug-phpstorm_step4.webp" />
 
+<img src="/images/fragments/php/wsl2-xdebug-phpstorm_step5.webp" />
+
+<img src="/images/fragments/php/wsl2-xdebug-phpstorm_step6.webp" />
+
 <img src="/images/fragments/php/wsl2-xdebug-phpstorm_step7.webp" />
+
+<img src="/images/fragments/php/wsl2-xdebug-phpstorm_step8.webp" />
 
 
 
@@ -57,6 +63,16 @@ keywords: php
 XDEBUG_SESSION=PHPSTORM; Path=/; Expires=Sat, 17 Aug 2024 09:02:46 GMT;
 ```
 
-<img src="/images/fragments/php/wsl2-xdebug-phpstorm_step5.webp" />
+<img src="/images/fragments/php/wsl2-xdebug-phpstorm_step9.webp" />
 
-<img src="/images/fragments/php/wsl2-xdebug-phpstorm_step6.webp" />
+
+
+#### 注意点：
+
+1）PHPStorm 配置中的 `PHP -> Servers` 中的端口号为：`当前项目端口号` ，并且需要注意：`映射文件为项目绝对路径 如 /www/wwwroot/admin` ，还需要注意 `NAME` 与 `php.ini` 中的 XDebug 配置保持一致
+
+2）PHPStorm 配置中的 `PHP -> Debug -> DBGp Proxy` 中的端口号为 XDebug的端口号 ，还需要注意 `IDE key` 与 `php.ini` 中的 XDebug 配置保持一致
+
+3）Postman 配置 Cookies 的 `XDEBUG_SESSION=[名称]` ，【名称】需要与 `php.ini` 中的 XDebug 配置保持一致
+
+4）验证 XDebug 的 validate 时，需要启动项目并指定到 `public` 文件
