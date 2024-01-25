@@ -16,7 +16,7 @@ keywords: navicat
 
 #### 激活步骤：
 
-1）官网[下载地址](http://download.navicat.com.cn/download/navicat161_premium_cs_x64.exe)，下载 **Navicat 16.1**，**其他版本不行！！！**
+1）官网[下载地址](https://download.navicat.com.cn/download/navicat161_premium_cs_x64.exe)，下载 **Navicat 16.1**，**其他版本不行！！！**
 
 2）安装文件为 **navicat161_premium_cs_x64.exe**，双击安装
 

@@ -76,3 +76,7 @@ XDEBUG_SESSION=PHPSTORM; Path=/; Expires=Sat, 17 Aug 2024 09:02:46 GMT;
 3）Postman 配置 Cookies 的 `XDEBUG_SESSION=[名称]` ，【名称】需要与 `php.ini` 中的 XDebug 配置保持一致
 
 4）验证 XDebug 的 validate 时，需要启动项目并指定到 `public` 文件
+
+5）如果是 Chrome 浏览器调试，则还需要安装 `Xdebug helper`
+
+<img src="/images/fragments/php/wsl2-xdebug-phpstorm_step10.webp" />
