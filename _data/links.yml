@@ -137,3 +137,23 @@
 - name: 北极鲇鱼
   url: https://sunwk.fun/
   src: vpn
+
+- name: TVCBOT
+  url: https://www.tvcbot.com/
+  src: usdt
+
+- name: TradingView
+  url: https://www.tradingview.com/
+  src: usdt
+
+- name: Discord
+  url: https://discord.com/
+  src: usdt
+
+- name: Tron Test
+  url: https://nileex.io/join/getJoinPage
+  src: usdt
+
+- name: Eth Test
+  url: https://sepolia-faucet.pk910.de/
+  src: usdt
