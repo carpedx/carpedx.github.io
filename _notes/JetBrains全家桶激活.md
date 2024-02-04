@@ -14,6 +14,10 @@ keywords: JetBrains
 
 
 
+## 方式一：使用破解文件
+
+
+
 #### 激活步骤：
 
 1）打开[激活网址](https://www.jiweichengzhu.com/ide/code)
@@ -54,3 +58,38 @@ keywords: JetBrains
 
 8）点击运行软件，输入我们已经下好的激活码。
 <img src="/images/notes/jetbrains/jetbrains_active_step3.jpg" />
+
+
+
+## 方式二：在线激活
+
+
+
+1）打开[激活网址](https://3.jetbra.in/)，选一个online点进去
+
+<img src="/images/notes/jetbrains/jetbrains_active_step4.jpg" />
+
+2）下载激活文件
+
+<img src="/images/notes/jetbrains/jetbrains_active_step5.jpg" />
+
+<img src="/images/notes/jetbrains/jetbrains_active_step6.jpg" />
+
+<img src="/images/notes/jetbrains/jetbrains_active_step7.jpg" />
+
+3）修改配置文件，修改 idea 安装目录 bin 下的 idea64.exe.vmoptions
+
+```tex
+# 请修改为ja-netfilter.jar文件所在绝对路径  
+-javaagent:C:/Program Files/JetBrains/jetbra/ja-netfilter.jar=jetbrains  
+--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED  
+--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED  
+```
+
+4）在刚刚的网址获取激活码
+
+<img src="/images/notes/jetbrains/jetbrains_active_step8.jpg" />
+
+5）启动，填写激活码，点击激活
+
+<img src="/images/notes/jetbrains/jetbrains_active_step9.jpg" />

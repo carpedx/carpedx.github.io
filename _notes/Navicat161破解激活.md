@@ -14,10 +14,6 @@ keywords: navicat
 
 
 
-## 方式一：使用破解文件
-
-
-
 #### 激活步骤：
 
 1）官网[下载地址](https://download.navicat.com.cn/download/navicat161_premium_cs_x64.exe)，下载 **Navicat 16.1**，**其他版本不行！！！**
@@ -83,38 +79,3 @@ keywords: navicat
 <img src="/images/notes/navicat/navicat_active_step12.webp" />
 
 <img src="/images/notes/navicat/navicat_active_step13.webp" />
-
-
-
-## 方式二：在线激活
-
-
-
-1）打开[激活网址](https://3.jetbra.in/)，选一个online点进去
-
-<img src="/images/notes/navicat/navicat_active_step14.webp" />
-
-2）下载激活文件
-
-<img src="/images/notes/navicat/navicat_active_step15.webp" />
-
-<img src="/images/notes/navicat/navicat_active_step16.webp" />
-
-<img src="/images/notes/navicat/navicat_active_step17.webp" />
-
-3）修改配置文件，修改 idea 安装目录 bin 下的 idea64.exe.vmoptions
-
-```tex
-# 请修改为ja-netfilter.jar文件所在绝对路径  
--javaagent:C:/Program Files/JetBrains/jetbra/ja-netfilter.jar=jetbrains  
---add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED  
---add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED  
-```
-
-4）在刚刚的网址获取激活码
-
-<img src="/images/notes/navicat/navicat_active_step18.webp" />
-
-5）启动，填写激活码，点击激活
-
-<img src="/images/notes/navicat/navicat_active_step19.webp" />
