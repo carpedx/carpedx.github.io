@@ -47,23 +47,3 @@ permalink: /links/
   {% endif %}
 {% endfor %}
 </ul>
-
-> 科学上网
-
-<ul>
-{% for link in site.data.links %}
-  {% if link.src == 'vpn' %}
-  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-> 数字货币
-
-<ul>
-{% for link in site.data.links %}
-  {% if link.src == 'usdt' %}
-  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
