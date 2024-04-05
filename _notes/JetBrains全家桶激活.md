@@ -67,15 +67,15 @@ keywords: JetBrains
 
 1）打开[激活网址](https://3.jetbra.in/)，选一个online点进去
 
-<img src="/images/notes/jetbrains/jetbrains_active_step4.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step4.webp" />
 
 2）下载激活文件
 
-<img src="/images/notes/jetbrains/jetbrains_active_step5.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step5.webp" />
 
-<img src="/images/notes/jetbrains/jetbrains_active_step6.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step6.webp" />
 
-<img src="/images/notes/jetbrains/jetbrains_active_step7.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step7.webp" />
 
 3）修改配置文件，修改 idea 安装目录 bin 下的 idea64.exe.vmoptions
 
@@ -88,8 +88,8 @@ keywords: JetBrains
 
 4）在刚刚的网址获取激活码
 
-<img src="/images/notes/jetbrains/jetbrains_active_step8.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step8.webp" />
 
 5）启动，填写激活码，点击激活
 
-<img src="/images/notes/jetbrains/jetbrains_active_step9.jpg" />
+<img src="/images/notes/jetbrains/jetbrains_active_step9.webp" />
