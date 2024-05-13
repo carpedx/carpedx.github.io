@@ -22,7 +22,7 @@ keywords: navicat
 
 3）选择一个下载激活工具
 
-​	蓝奏云：[激活工具]()
+​	蓝奏云：[激活工具](https://wwl.lanzoue.com/ixOUQ1ykvwnc)
 
 ​	夸克网盘：[激活工具](https://pan.quark.cn/s/5119162db6a2#/list/share)	
 
