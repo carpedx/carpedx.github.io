@@ -1,8 +1,8 @@
 ---
 layout: fragment
-title: elasticsearch 简单使用
+title: Elasticsearch简单使用
 tags: [es]
-description: elasticsearch 简单使用
+description: Elasticsearch简单使用
 keywords: es
 ---
 
