@@ -38,3 +38,5 @@ activate = 1
 如图所示: 
 
 <img src="/images/fragments/php/php-openssl_step1.webp" />
+
+需要重启 php-fpm
