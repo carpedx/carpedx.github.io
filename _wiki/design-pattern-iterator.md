@@ -14,11 +14,15 @@ sorting: 7
 
 ------
 
-
-
 - PHP 中的 `Iterator` 接口已经为我们准备好了一套标准的 `Iterator` 模式的实现，而且实现这个接口的类可以用 `foreach` 来遍历
 
 ------
+
+
+
+GoF类图：
+
+<img src="/images/wiki/algorithm/design-pattern-iterator_step1.jpg"  />
 
 
 

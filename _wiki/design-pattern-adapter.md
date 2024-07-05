@@ -14,6 +14,30 @@ sorting: 5
 
 ------
 
+- 继承形式的在GoF书中是以C++为示例的，因为C++可以实现多重继承，但现在流行的大部分语言是以接口为形式的，也可以实现，但使用这种形式的适配器不多
+
+- 其实还是面向接口编程的一种思维，类似于装饰器对旧功能的包装，我们这里就是直接去进行了替换，但对外的调用还是保持不变
+
+------
+
+
+
+GoF类图（继承式）：
+
+<img src="/images/wiki/algorithm/design-pattern-adapter_step1.jpg"  />
+
+
+
+GoF类图（组合式）：
+
+<img src="/images/wiki/algorithm/design-pattern-adapter_step2.jpg"  />
+
+
+
+PHP代码类图：
+
+<img src="/images/wiki/algorithm/design-pattern-adapter_step3.jpg"  />
+
 
 
 PHP：

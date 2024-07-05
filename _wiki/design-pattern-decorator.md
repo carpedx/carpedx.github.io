@@ -3,7 +3,7 @@ layout: wiki
 title: 装饰器模式
 cate1: design-pattern
 cate2: 
-description: 动态地给一个对象添加一些额外的职责，就增加功能来说，Decorator模式相比生成子类更为灵活
+description: 动态地给一个对象添加一些额外的职责
 keywords: design-pattern
 sorting: 4
 ---
@@ -21,6 +21,18 @@ sorting: 4
 - 另外在 Laravel 中，日志处理这里也是对 `Monolog` 进行了装饰
 
 ------
+
+
+
+GoF类图：
+
+<img src="/images/wiki/algorithm/design-pattern-decorator_step1.jpg"  />
+
+
+
+PHP代码类图：
+
+<img src="/images/wiki/algorithm/design-pattern-decorator_step2.jpg"  />
 
 
 

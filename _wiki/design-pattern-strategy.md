@@ -16,12 +16,17 @@ sorting: 10
 
 ------
 
-
-
 - 工厂相关的模式属于创建型模式，顾名思义，这种模式是用来创建对象的。而策略模式属性行为型模式，通过执行上下文，将要调用的函数方法封装了起来，客户端只需要调用执行上下文的方法就可以了
+
 - 策略模式可以优化单元测试，因为每个算法都有自己的类，所以可以通过自己的接口单独测试
 
 ------
+
+
+
+GoF类图：
+
+<img src="/images/wiki/algorithm/design-pattern-strategy_step1.jpg"  />
 
 
 
@@ -30,7 +35,10 @@ PHP：
 ```php
 <?php
 
-// 定义算法抽象及实现
+/*
+ * 定义算法抽象及实现
+ */
+
 interface Strategy{
     function AlgorithmInterface();
 }
@@ -45,7 +53,10 @@ class ConcreteStrategyB implements Strategy{
     }
 }
 
-// 定义执行环境上下文
+/*
+ * 定义执行环境上下文
+ */
+
 class Context{
     private $strategy;
     function __construct(Strategy $s){
@@ -55,6 +66,10 @@ class Context{
         $this->strategy->AlgorithmInterface();
     }
 }
+
+/*
+ * 定义执行环境上下文
+ */
 
 $strategyA = new ConcreteStrategyA();
 $context = new Context($strategyA);

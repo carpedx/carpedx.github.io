@@ -20,6 +20,18 @@ sorting: 2
 
 
 
+GoF类图：
+
+<img src="/images/wiki/algorithm/design-pattern-factory_step1.jpg"  />
+
+
+
+PHP方法类图：
+
+<img src="/images/wiki/algorithm/design-pattern-factory_step2.jpg"  />
+
+
+
 PHP：
 
 ```php
