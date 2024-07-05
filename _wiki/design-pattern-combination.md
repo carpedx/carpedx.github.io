@@ -3,7 +3,7 @@ layout: wiki
 title: 组合模式
 cate1: design-pattern
 cate2: 
-description: 组合模式
+description: 将对象组合成树形结构以表示“部分-整体”的层次结构
 keywords: design-pattern
 sorting: 14
 ---
@@ -14,11 +14,19 @@ sorting: 14
 
 ------
 
-
-
-- 组合模式最大的特点就是可以让叶子节点或者子节点无限的组合和延伸。能够形成各种不同的组合方式，但又能保证万变不离其宗。让整个递归是在可控的范围内进行
+- 从来代码来看，完全就是一颗树的实现
+- 所有的子节点和叶子节点都可以处理数据，但叶子节点为终点
+- 你希望用户可以忽略组合对象与单个对象的不同，统一地使用组合结构中的所有对象时，就应该考虑使用组合模式
+- 用户不用关心到底是处理一个叶节点还是处理一个组合组件，也就用不着为定义组合而写一些选择判断语句了
+- 组合模式可以让客户一致性地使用组合结构和单个对象
 
 ------
+
+
+
+GoF类图：
+
+<img src="/images/wiki/algorithm/design-pattern-combination_step1.jpg"  />
 
 
 
@@ -26,6 +34,10 @@ PHP：
 
 ```php
 <?php
+
+/*
+ * 抽象出来的组合节点声明，在适当情况下实现所有类的公共接口的缺省行为，是所有子节点的父类。
+ */
 
 abstract class Component
 {
@@ -75,6 +87,10 @@ class Composite extends Component
         return $this->componentList[$i];
     }
 }
+
+/*
+ * 具体的节点实现类，保存下级节点的引用，定义实际的节点行为。
+ */
 
 class Leaf extends Component
 {
