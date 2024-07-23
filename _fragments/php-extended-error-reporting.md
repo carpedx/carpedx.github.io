@@ -24,8 +24,15 @@ keywords: php
 
 #### 4、如果报错找不到 `php` 扩展
 
-手动在 `php.ini` 中添加一行，用来指定 `php` 扩展的目录：
+手动在 `php.ini` 中添加，指定扩展：
+
+```php
+extension=openssl
+```
+
+指定扩展目录：
 
 ```php
 extension_dir="D:\phpstudy_pro\Extensions\php\php8.2.9nts\ext"
 ```
+
