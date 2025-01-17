@@ -126,6 +126,10 @@
   url: https://tool.lu/timestamp/
   src: tool
 
+- name: 哔哩哔哩查评论
+  url: https://www.aicu.cc/
+  src: tool
+
 - name: 周公子
   url: https://ikuuu.club/
   src: vpn
